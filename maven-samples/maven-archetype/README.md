@@ -57,7 +57,7 @@ mvn archetype:generate\
 
 ### 参考
 
-- [maven-archetype-archetype metadata.xml]()
+- [maven-archetype - Github](https://github.com/apache/maven-archetype)
 - [Maven Archetype Plugin](http://maven.apache.org/archetype/maven-archetype-plugin/)
 - [how to use the Archetype Plugin to create a project](http://maven.apache.org/archetype/maven-archetype-plugin/usage.html)
 - [how to use the Archetype Plugin to create an archetype from an existing project](http://maven.apache.org/archetype/maven-archetype-plugin/advanced-usage.html)

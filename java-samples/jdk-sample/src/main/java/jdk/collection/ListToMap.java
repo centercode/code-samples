@@ -1,7 +1,7 @@
 package jdk.collection;
 
 import com.google.common.collect.Maps;
-import model.IdName;
+import jdk.collection.model.IdName;
 
 import java.util.ArrayList;
 import java.util.HashMap;
