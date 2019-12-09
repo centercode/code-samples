@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false" scanPeriod="60 seconds" debug="false">
+    <property name="LOG_HOME" value="./logs"/>
+    <property name="appName" value="myapp"/>
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
+    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr([${LOG_LEVEL_PATTERN:-%p}]) %clr([%t]){faint} %clr(%logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}</pattern>
+        </layout>
+    </appender>
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/${appName}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/${appName}-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <MaxHistory>365</MaxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [%thread] [%logger{50} : %line] %msg%n</pattern>
+        </layout>
+    </appender>
+    
+    <root level="info">
+        <appender-ref ref="console"/>
+        <appender-ref ref="file"/>
+    </root>
+
+    <logger name="org.springframework" level="WARN"/>
+</configuration>
