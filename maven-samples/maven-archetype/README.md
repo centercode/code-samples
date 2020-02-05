@@ -1,8 +1,12 @@
-### Maven项目模板
+# Maven项目模板
 
-#### maven-archetype-quickstart
+maven项目模板可以用来快速搭建项目框架。下面介绍几个官方的模板：
 
-查看所有版本：http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/maven-metadata.xml
+### maven-archetype-quickstart
+
+[查看版本列表](http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/maven-metadata.xml)
+
+使用示例：
 
 ```bash
 mvn archetype:generate -B\
@@ -15,7 +19,9 @@ mvn archetype:generate -B\
  -Dpackage=io.github.centercode
 ```
 
-#### maven-archetype-simple
+### maven-archetype-simple
+
+使用示例：
 
 ```bash
 mvn archetype:generate -B\
@@ -28,7 +34,9 @@ mvn archetype:generate -B\
  -Dpackage=io.github.centercode
 ```
 
-#### maven-archetype-webapp
+### maven-archetype-webapp
+
+使用示例：
 
 ```bash
 mvn archetype:generate -B\
@@ -41,7 +49,9 @@ mvn archetype:generate -B\
  -Dpackage=io.github.centercode
 ```
 
-#### cocoon-22-archetype-webapp
+### cocoon-22-archetype-webapp
+
+使用示例：
 
 ```shell
 mvn archetype:generate\
