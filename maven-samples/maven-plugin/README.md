@@ -1,10 +1,16 @@
 # Maven插件常用配置
 
-## Maven-assembly-plugin
+## Maven-Assembly-Plugin
+
+### `assembly`目标
+
+2.x版本中的`assembly`目标在3.x版本中已删除，新版旧版都可以使用`single`目标代替。
 
 ### `single`目标
 
-使用自定义的描述文件：
+#### 描述文件
+
+描述文件用来指定打包的格式，可以使用自定义的描述文件：
 
 ```xml
 <plugin>
@@ -20,31 +26,86 @@
 </plugin>
 ```
 
-引用内置描述文件（旧版本`assembly`目标）：
+或者使用maven-assembly-plugin内置描述文件：
 
 ```xml
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-assembly-plugin</artifactId>
-  <version>2.4.1</version>
+  <version>3.1.0</version>
   <configuration>
-    <!--打包文件名去掉描述符后缀-->
-    <appendAssemblyId>false</appendAssemblyId>
     <descriptorRefs>
-      <!--连同依赖打成一个uber jar-->
       <descriptorRef>jar-with-dependencies</descriptorRef>
     </descriptorRefs>
+    <appendAssemblyId>false</appendAssemblyId>
     <archive>
       <manifest>
-        <!--可以java -jar方式执行-->
-        <mainClass>org.sample.App</mainClass>
+        <mainClass>my.sample.App</mainClass>
       </manifest>
     </archive>
   </configuration>
 </plugin>
 ```
 
+配置说明：
+
+| 配置项                     | 值                    | 说明                                     |
+| -------------------------- | --------------------- | ---------------------------------------- |
+| descriptorRef              | jar-with-dependencies | 连同依赖jar包打成一个uber jar            |
+| appendAssemblyId           | false                 | 去掉文件名中的jar-with-dependencies`后缀 |
+| archive.manifest.mainClass | my.sample.App         | 打成以`java -jar`方式执行的jar           |
+
+#### 执行
+
+可以使用`mvn assembly:single`执行，也可以绑定到`package`阶段执行：
+
+```xml
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-assembly-plugin</artifactId>
+  <version>3.1.0</version>
+  <configuration>
+    <!-- ... -->
+  </configuration>
+  <executions>
+    <execution>
+      <phase>package</phase>
+      <goals>
+          <goal>single</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+```
+
 参考：
 
-- [描述符格式](http://maven.apache.org/plugins/maven-assembly-plugin/assembly.html)
-- [内置描述文件](http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#)
+- [官方文档-描述符格式](http://maven.apache.org/plugins/maven-assembly-plugin/assembly.html)
+- [官方文档-内置描述文件](http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#)
+
+## Maven-Shade-Plugin
+
+### `shade`目标
+
+使用Transformer合并HDFS ServiceLoader的配置文件：
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>3.2.1</version>
+    <configuration>
+        <transformers>
+            <transformer
+                    implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                <resource>META-INF/services/org.apache.hadoop.fs.FileSystem</resource>
+            </transformer>
+            <transformer
+                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                <mainClass>my.sample.App</mainClass>
+            </transformer>
+        </transformers>
+    </configuration>
+</plugin>
+```
+
