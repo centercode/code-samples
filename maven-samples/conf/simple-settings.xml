@@ -4,19 +4,35 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-  <mirrors>
-	<mirror>  
-		<id>maven-public</id>  
-		<name>maven-public</name>  
-		<url>https://maven.aliyun.com/repository/public</url>  
-		<mirrorOf>central</mirrorOf>          
-	</mirror>
-	<mirror>  
-		<id>apache-snapshots</id>  
-		<name>apache-snapshots</name>  
-		<url>https://maven.aliyun.com/repository/apache-snapshots/</url>  
-		<mirrorOf>central</mirrorOf>          
-	</mirror>
-  </mirrors>
+    <mirrors>
+        <mirror>
+            <id>aliyun-maven-public</id>
+            <name>阿里云公共仓库</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <!-- <mirrorOf>central</mirrorOf> -->
+        </mirror>
+    </mirrors>
+
+    <repositories>
+        <repository>
+            <id>spring</id>
+            <url>https://maven.aliyun.com/repository/spring</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>cdh.repo</id>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
+            <name>Cloudera Repositories</name>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 
 </settings>
