@@ -1,7 +1,6 @@
-package jdk.collection;
+package jdk.collection.list;
 
 import com.google.common.collect.Maps;
-import jdk.collection.model.IdName;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,4 +49,6 @@ public class ListToMap {
         return IdNames.stream()
                 .collect(Collectors.toMap(IdName::getName, Function.identity(), (x, y) -> y, LinkedHashMap::new));
     }
+
+
 }

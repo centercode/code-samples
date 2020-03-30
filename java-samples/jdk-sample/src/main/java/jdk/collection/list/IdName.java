@@ -1,4 +1,4 @@
-package jdk.collection.model;
+package jdk.collection.list;
 
 public class IdName {
 

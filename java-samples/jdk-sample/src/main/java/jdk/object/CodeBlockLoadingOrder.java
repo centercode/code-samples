@@ -14,7 +14,7 @@ package jdk.object;
  &nbsp;&nbsp;    staticVariable1值:StaticVariable1 <br>
  [非静态代码块3] 初始化 <br>
  */
-public class CodeBlockLoadOrder {
+public class CodeBlockLoadingOrder {
 
 
     {
@@ -36,7 +36,7 @@ public class CodeBlockLoadOrder {
     public static void main(String[] args) {
         printf("main方法");
         System.out.printf("\tstaticVariable1值:%s\n", staticVariable1);
-        CodeBlockLoadOrder objectMain = new CodeBlockLoadOrder();
+        CodeBlockLoadingOrder objectMain = new CodeBlockLoadingOrder();
     }
     private static void printf(String name) {
         System.out.printf("[%s] 初始化\n", name);

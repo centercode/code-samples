@@ -1,8 +1,6 @@
-package jdk.collection;
+package jdk.collection.list;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class SortedListTest {
 
