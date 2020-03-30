@@ -11,7 +11,9 @@ public class ThreadPoolTest {
                 2,
                 10000,
                 TimeUnit.DAYS,
-                new LinkedBlockingDeque<>(2));//这里如果指定了固定的长度就表示是有界队列了
+                //这里如果指定了固定的长度就表示是有界队列了
+                new LinkedBlockingDeque<>(2)
+        );
         List<Future<?>> futures = new ArrayList<>();
         for (int a = 0; a < 1000; a++) {
             futures.add(executor.submit(() -> {
