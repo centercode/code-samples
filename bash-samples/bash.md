@@ -1,23 +1,16 @@
 ### 登录shell
 
-#### 登录交互式shell
-
-登录shell是当你通过系统控制台、虚拟控制台、ssh或其他程序远程登录，或者以其他广方式登录到系统时显示提示符的第一个shell。**登录shell一定是交互式的。**
+**登录shell**：登录shell是当你通过系统控制台、虚拟控制台、ssh或其他程序远程登录，或者以其他方式登录到系统时显示提示符的第一个shell。**登录shell一定是交互式的。**
 
 shell首先执行/etc/profile中的命令，为系统内的所有bash用户建立默认特征。除了执行它所保存的命令外，一些版本的profile执行/etc/profile.d目录下所有扩展名为.sh的文件中的命令。这种设置使得拥有root权限的用户不需要修改profile本身文件就可以改变profile所执行的命令。
 
-shell依次查找`~/.bash_profile`,`~/.bash_login`,`~/.profile`并执行它找到的第1个关文件中的命令。
+shell依次查找`~/.bash_profile`，`~/.bash_login`，`~/.profile`并执行它找到的第1个关文件中的命令。
 
 退出执行`.bash_logout`文件中的命令。这个文件包含了退出话时执行的清理命令，如删除临时文件等。
 
-#### 非登录交互式shell
+**交互式非登录shell**：终端模拟器显示的shell是交互式非登录shell。交互式非登录shell执行`~/.bashrc`文件中的命令。默认的`~/.bashrc`文件调用`/etc/bashrc`。
 
-终端模拟器显示的shell是交互式非登录shell。
-交互式非登录shell执行`~/.bashrc`文件中的命令。默认的`~/.bashrc`文件调用`/etc/bashrc`。
-
-#### 非交互式shell
-
-非交互式shell(如那些运行shell脚本的shell)并不执行前面描述的启动文件中的命令，然而这些从登录shell继承了由这些启动文件设置的shell变量。
+**非交互式shell**：非交互式shell并不执行前面描述的启动文件中的命令(如那些运行shell脚本的shell)，然而这些shell从登录shell继承了由这些启动文件设置的shell变量。
 
 ### 文件头
 
