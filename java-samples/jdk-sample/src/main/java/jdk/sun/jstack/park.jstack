@@ -1,0 +1,42 @@
+Full thread dump OpenJDK 64-Bit Server VM (25.212-b03 mixed mode):
+
+"Attach Listener" #11 daemon prio=9 os_prio=0 tid=0x00007ff480001000 nid=0x1e6 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"DestroyJavaVM" #10 prio=5 os_prio=0 tid=0x00007ff4c000a800 nid=0x1b8 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"WaitingDemoThread1" #9 prio=5 os_prio=0 tid=0x00007ff4c01e1800 nid=0x1c6 waiting on condition [0x00007ff4acabf000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:304)
+        at jdk.sun.WaitingDemo$ParkWait.await(WaitingDemo.java:47)
+        at jdk.sun.WaitingDemo.lambda$main$0(WaitingDemo.java:32)
+        at jdk.sun.WaitingDemo$$Lambda$1/2093631819.run(Unknown Source)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Service Thread" #8 daemon prio=9 os_prio=0 tid=0x00007ff4c00d2000 nid=0x1c4 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread2" #7 daemon prio=9 os_prio=0 tid=0x00007ff4c00bc800 nid=0x1c3 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #6 daemon prio=9 os_prio=0 tid=0x00007ff4c00bb000 nid=0x1c2 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #5 daemon prio=9 os_prio=0 tid=0x00007ff4c00b8000 nid=0x1c1 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=0 tid=0x00007ff4c00b6800 nid=0x1c0 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=0 tid=0x00007ff4c0084000 nid=0x1bf in Object.wait() [0x00007ff4ad3cf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        - waiting on <0x00000000d6008ed0> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+        - locked <0x00000000d6008ed0> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+        at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+"Reference Handler" #2 daemon prio=10 os_prio=0 tid=0x00007ff4c0081800 nid=0x1be in Object.wait() [0x00007ff4ad4df000]
