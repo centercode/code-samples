@@ -15,6 +15,6 @@ public class Logger {
     }
 
     public void info(String message) {
-        System.out.println(Instant.now() + "," + name + ":" + message);
+        System.out.println(Instant.now() + " [INFO] [" + name + "]: " + message);
     }
 }
