@@ -27,6 +27,7 @@ public class ConditionInterruptDemo4 {
         @Override
         public void run() {
             lock.lock();
+//            condition.awaitUninterruptibly();
             try {
                 condition.await();
             } catch (InterruptedException e) {
