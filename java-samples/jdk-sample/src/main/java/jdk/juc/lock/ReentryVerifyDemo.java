@@ -1,4 +1,4 @@
-package jdk.lock;
+package jdk.juc.lock;
 
 import java.util.concurrent.locks.ReentrantLock;
 

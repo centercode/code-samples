@@ -1,4 +1,4 @@
-package jdk.lock;
+package jdk.juc.lock;
 
 /**
  * 线程死锁演示

@@ -1,4 +1,4 @@
-package jdk.condition;
+package jdk.juc.condition;
 
 import jdk.util.Threads;
 import org.slf4j.Logger;
