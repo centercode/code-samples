@@ -4,21 +4,38 @@ import java.time.Instant;
 
 public class Logger {
 
-    private final String name;
+    private final String className;
 
-    public Logger(String name) {
-        this.name = name;
+    private final boolean enableLineNumber = false;
+
+    public Logger(String className) {
+        this.className = className;
     }
 
-    public String getName() {
-        return name;
+    public void error(String message) {
+        log("ERROR", message);
     }
+
 
     public void info(String message) {
+        log("INFO", message);
+    }
+
+    private void log(String level, String message) {
         String threadName = Thread.currentThread().getName();
-        int lineNumber = getLineNumber();
-        String lineExpr = -1 >= lineNumber ? "" : ":" + lineNumber;
-        System.out.println(Instant.now() + " [INFO] [" + threadName + "] [" + this.name + lineExpr + "]: " + message);
+        String positionExpr = getLinePositionExpr();
+        String log = Instant.now() + " [" + level + "] [" + threadName + "] [" + positionExpr + "]: " + message;
+        System.out.println(log);
+    }
+
+    private String getLinePositionExpr() {
+        if (enableLineNumber) {
+            int lineNumber = getLineNumber();
+            if (-1 < lineNumber) {
+                return className + ":" + lineNumber;
+            }
+        }
+        return className;
     }
 
     private int getLineNumber() {
