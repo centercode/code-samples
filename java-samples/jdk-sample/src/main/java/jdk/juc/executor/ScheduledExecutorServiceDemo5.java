@@ -12,8 +12,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 取消定时任务的执行
  */
-public class ExecutorDemo5 {
-    private static Logger logger = LoggerFactory.getLogger(ExecutorDemo5.class);
+public class ScheduledExecutorServiceDemo5 {
+    private static Logger logger = LoggerFactory.getLogger(ScheduledExecutorServiceDemo5.class);
 
     public static void main(String[] args) throws InterruptedException {
         logger.info("Main start");

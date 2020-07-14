@@ -10,9 +10,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * schedule:延迟执行任务1次
  */
-public class ExecutorDemo1 {
+public class ScheduledExecutorServiceDemo1 {
 
-    private static Logger logger = LoggerFactory.getLogger(ExecutorDemo1.class);
+    private static Logger logger = LoggerFactory.getLogger(ScheduledExecutorServiceDemo1.class);
 
     public static void main(String[] args) {
         logger.info("Main start");

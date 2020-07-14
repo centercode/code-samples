@@ -8,8 +8,8 @@ import java.util.concurrent.*;
 /**
  * cancel方法示例
  */
-public class ExecutorDemo7 {
-    private static Logger logger = LoggerFactory.getLogger(ExecutorDemo7.class);
+public class ExecutorServiceDemo7 {
+    private static Logger logger = LoggerFactory.getLogger(ExecutorServiceDemo7.class);
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(1);

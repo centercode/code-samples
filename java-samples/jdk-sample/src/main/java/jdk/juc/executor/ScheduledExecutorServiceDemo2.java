@@ -11,9 +11,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * scheduleAtFixedRate:固定的频率执行任务
  */
-public class ExecutorDemo2 {
+public class ScheduledExecutorServiceDemo2 {
 
-    private static Logger logger = LoggerFactory.getLogger(ExecutorDemo2.class);
+    private static Logger logger = LoggerFactory.getLogger(ScheduledExecutorServiceDemo2.class);
 
     public static void main(String[] args) {
         logger.info("Main start");

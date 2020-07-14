@@ -11,8 +11,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * scheduleWithFixedDelay:固定的间隔执行任务
  */
-public class ExecutorDemo3 {
-    private static Logger logger = LoggerFactory.getLogger(ExecutorDemo3.class);
+public class ScheduledExecutorServiceDemo3 {
+    private static Logger logger = LoggerFactory.getLogger(ScheduledExecutorServiceDemo3.class);
 
     public static void main(String[] args) {
         logger.info("Main start");

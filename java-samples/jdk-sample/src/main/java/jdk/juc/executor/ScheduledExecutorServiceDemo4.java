@@ -12,9 +12,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 定时任务有异常会怎么样？
  */
-public class ExecutorDemo4 {
+public class ScheduledExecutorServiceDemo4 {
 
-    private static Logger logger = LoggerFactory.getLogger(ExecutorDemo4.class);
+    private static Logger logger = LoggerFactory.getLogger(ScheduledExecutorServiceDemo4.class);
 
     public static void main(String[] args) throws InterruptedException {
         logger.info("Main start");

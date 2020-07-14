@@ -10,8 +10,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * FutureTask类
  */
-public class ExecutorDemo9 {
-    private static Logger logger = LoggerFactory.getLogger(ExecutorDemo9.class);
+public class FutureTaskDemo9 {
+    private static Logger logger = LoggerFactory.getLogger(FutureTaskDemo9.class);
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         FutureTask<Integer> futureTask = new FutureTask<>(() -> {
