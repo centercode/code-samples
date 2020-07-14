@@ -1,6 +1,6 @@
 package jdk.collection.list;
 
-import com.google.common.collect.Maps;
+//import com.google.common.collect.Maps;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,9 +41,9 @@ public class ListToMap {
         return hashMap;
     }
 
-    private Map<String, IdName> guavaLambda(List<IdName> IdNames) {
-        return Maps.uniqueIndex(IdNames, IdName::getName);
-    }
+//    private Map<String, IdName> guavaLambda(List<IdName> IdNames) {
+//        return Maps.uniqueIndex(IdNames, IdName::getName);
+//    }
 
     private Map<String, IdName> jdk8Lambda(List<IdName> IdNames) {
         return IdNames.stream()
