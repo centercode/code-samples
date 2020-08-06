@@ -24,7 +24,7 @@ public class Logger {
     private void log(String level, String message) {
         String threadName = Thread.currentThread().getName();
         String positionExpr = getLinePositionExpr();
-        String log = Instant.now() + " [" + level + "] [" + threadName + "] [" + positionExpr + "]: " + message;
+        String log = Instant.now() + " [" + level + "] [" + positionExpr + "] [" + threadName + "]: " + message;
         System.out.println(log);
     }
 
