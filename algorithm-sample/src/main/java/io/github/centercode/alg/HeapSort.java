@@ -35,20 +35,21 @@ class HeapSort {
     private void siftDown(int[] arr, int start, int end) {
         int dad = start;
         int son = start * 2 + 1;
-
+        int tmp = arr[dad];
         while (son <= end) {
             //找到子节点中最大的
             if (son + 1 <= end && arr[son] < arr[son + 1]) {
                 son++;
             }
-            if (arr[son] < arr[dad]) {
-                return;
+            if (arr[son] < tmp) {
+                break;
             } else {
-                swap(arr, son, dad);
+                arr[dad] = arr[son];
                 dad = son;
                 son = son * 2 + 1;
             }
         }
+        arr[dad] = tmp;
     }
 
     private void swap(int[] arr, int a, int b) {
