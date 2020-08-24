@@ -1,4 +1,4 @@
-package io.github.centercode.alg;
+package io.github.centercode.sort;
 
 import java.util.Arrays;
 

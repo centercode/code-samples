@@ -1,4 +1,4 @@
-package io.github.centercode.alg;
+package io.github.centercode.linklist;
 
 import java.util.StringJoiner;
 
