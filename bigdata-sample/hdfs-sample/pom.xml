@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hadoop-sample</artifactId>
+    <artifactId>hdfs-sample</artifactId>
 
     <properties>
         <hadoop.version>2.6.0</hadoop.version>

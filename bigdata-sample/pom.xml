@@ -10,7 +10,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>hadoop-sample</module>
+        <module>hdfs-sample</module>
+        <module>mapreduce-sample</module>
     </modules>
 
     <dependencies>
