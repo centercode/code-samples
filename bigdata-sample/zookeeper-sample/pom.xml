@@ -4,22 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.centercode.sample</groupId>
-    <artifactId>bigdata-samples</artifactId>
+    <groupId>io.github.centercode</groupId>
+    <artifactId>zookeeper-sample</artifactId>
     <version>1.0</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>hdfs-sample</module>
-        <module>mapreduce-sample</module>
-        <module>zookeeper-sample</module>
-    </modules>
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.6</version>
         </dependency>
     </dependencies>
 
