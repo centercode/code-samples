@@ -19,8 +19,5 @@ $ tree -d -L 2
 └── zookeeper-sample
 ```
 
-documents please refer:
+Documents please refer: [yx91490's blog](https://yx91490.github.io)
 
-[maven-archetype](https://yx91490.github.io/java/java-env/maven_archetype.html)
-
-[maven-plugin](https://yx91490.github.io/java/java-env/maven_plugin.html)
