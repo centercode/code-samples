@@ -1,4 +1,4 @@
-package io.centercode.sample.wordcount;
+package io.github.centercode.sample.wordcount;
 
 public class WordCountCombiner extends WordCountReducer {
 }

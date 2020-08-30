@@ -1,4 +1,4 @@
-package io.centercode.sample.wordcount;
+package io.github.centercode.sample.wordcount;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
@@ -26,17 +26,22 @@ public class WordCountJob extends Configured implements Tool {
         Configuration conf = getConf();
         Job job = Job.getInstance(conf, this.getClass().getSimpleName());
         job.setJarByClass(WordCountJob.class);
-        job.setSortComparatorClass(Text.Comparator.class);
+
+        //mapper
         job.setMapperClass(WordCountMapper.class);
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(LongWritable.class);
         job.setCombinerClass(WordCountCombiner.class);
+        job.setSortComparatorClass(Text.Comparator.class);
+
+        //reducer
         job.setReducerClass(WordCountReducer.class);
-        FileInputFormat.setInputPaths(job, new Path("/input"));
-        FileOutputFormat.setOutputPath(job, new Path("/output"));
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(LongWritable.class);
-        job.setNumReduceTasks(2);
+
+        FileInputFormat.setInputPaths(job, new Path(args[0]));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+        job.setNumReduceTasks(Integer.valueOf(args[2]));
 
         return (job.waitForCompletion(false) ? 0 : 1);
     }

@@ -8,18 +8,15 @@ $ tree -d -L 2
 ├── algorithm-sample
 ├── awk-sample
 ├── bash-sample
-├── bigdata-sample
-│   ├── hdfs-sample
-│   └── mapreduce-sample
+├── hadoop-sample
 ├── html-sample
 ├── java-sample
 │   ├── jdk-sample
 │   ├── log4j
 │   └── logback
-└── maven-sample
-    ├── maven-archetype
-    ├── maven-conf
-    └── maven-plugin
+├── maven-sample
+│   └── maven-conf
+└── zookeeper-sample
 ```
 
 documents please refer:

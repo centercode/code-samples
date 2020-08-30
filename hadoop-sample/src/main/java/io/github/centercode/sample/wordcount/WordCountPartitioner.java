@@ -1,4 +1,4 @@
-package io.centercode.sample.wordcount;
+package io.github.centercode.sample.wordcount;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;

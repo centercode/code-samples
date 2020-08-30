@@ -11,8 +11,9 @@
 
     <modules>
         <module>algorithm-sample</module>
-        <module>bigdata-sample</module>
         <module>java-sample/jdk-sample</module>
+        <module>hadoop-sample</module>
+        <module>zookeeper-sample</module>
     </modules>
 
 </project>
