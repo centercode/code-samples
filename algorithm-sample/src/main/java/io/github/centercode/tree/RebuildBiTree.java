@@ -15,11 +15,11 @@ public class RebuildBiTree {
             indexMap.put(inOrder[i], i);
         }
         return solution1(preOrder, 0, preOrder.length - 1,
-                inOrder, 0, inOrder.length - 1, indexMap);
+                0, indexMap);
     }
 
     private TreeNode solution1(int[] preOrder, int preStart, int preEnd,
-                               int[] inOrder, int inStart, int inEnd, Map<Integer, Integer> indexMap) {
+                               int inStart, Map<Integer, Integer> indexMap) {
         if (preStart > preEnd) {
             return null;
         }
@@ -31,12 +31,34 @@ public class RebuildBiTree {
         int inRoot = indexMap.get(rootVal);
         int leftLen = inRoot - inStart + 1;
         TreeNode left = solution1(preOrder, preStart + 1, preStart + leftLen - 1,
-                inOrder, inStart, inRoot - 1, indexMap);
+                inStart, indexMap);
         TreeNode right = solution1(preOrder, preStart + leftLen, preEnd,
-                inOrder, inRoot + 1, inEnd, indexMap);
+                inRoot + 1, indexMap);
         rootNode.left = left;
         rootNode.right = right;
         return rootNode;
+    }
+
+    //############## Solution2 一次遍历，O(n)
+
+    private int in = 0;
+    private int pre = 0;
+
+    public TreeNode solution2(int[] preOrder, int[] inOrder) {
+        return solution2(preOrder, inOrder, Integer.MIN_VALUE);
+    }
+
+    private TreeNode solution2(int[] preOrder, int[] inOrder, int stop) {
+        if (pre >= preOrder.length)
+            return null;
+        if (inOrder[in] == stop) {
+            in++;
+            return null;
+        }
+        TreeNode node = new TreeNode(preOrder[pre++]);
+        node.left = solution2(preOrder, inOrder, node.val);
+        node.right = solution2(preOrder, inOrder, stop);
+        return node;
     }
 }
 
