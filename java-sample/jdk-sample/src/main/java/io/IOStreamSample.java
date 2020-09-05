@@ -1,4 +1,4 @@
-package jdk.io;
+package io;
 
 public class IOStreamSample {
 }

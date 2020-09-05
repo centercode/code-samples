@@ -1,4 +1,4 @@
-package jdk.io;
+package io;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
