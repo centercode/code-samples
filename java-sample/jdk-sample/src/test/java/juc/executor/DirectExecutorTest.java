@@ -1,8 +1,6 @@
 package juc.executor;
 
-import jdk.util.Threads;
-import juc.executor.SerialExecutor;
-import juc.executor.ThreadPerTaskExecutor;
+import util.Threads;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

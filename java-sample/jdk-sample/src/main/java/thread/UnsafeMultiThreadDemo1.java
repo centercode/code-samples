@@ -1,4 +1,4 @@
-package jdk.thread;
+package thread;
 
 /**
  * 验证线程不安全的情况

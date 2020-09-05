@@ -1,4 +1,4 @@
-package jdk.object;
+package object;
 
 public class WaitNotifyDemo {
 

@@ -1,4 +1,4 @@
-package jdk.object;
+package object;
 
 /**
  //    对于一个类而言，按照如下顺序执行：

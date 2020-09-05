@@ -1,6 +1,6 @@
 package juc.atomic;
 
-import jdk.util.Threads;
+import util.Threads;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;

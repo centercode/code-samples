@@ -1,4 +1,4 @@
-package jdk.thread;
+package thread;
 
 public class DaemonDemo {
 
