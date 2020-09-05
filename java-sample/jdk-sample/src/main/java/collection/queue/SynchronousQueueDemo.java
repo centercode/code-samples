@@ -1,4 +1,4 @@
-package jdk.collection.queue;
+package collection.queue;
 
 import java.util.Random;
 import java.util.concurrent.SynchronousQueue;

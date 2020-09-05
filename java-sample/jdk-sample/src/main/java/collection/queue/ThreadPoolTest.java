@@ -1,4 +1,4 @@
-package jdk.collection.queue;
+package collection.queue;
 
 import java.util.ArrayList;
 import java.util.List;

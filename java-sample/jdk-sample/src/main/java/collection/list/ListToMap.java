@@ -1,4 +1,4 @@
-package jdk.collection.list;
+package collection.list;
 
 //import com.google.common.collect.Maps;
 
