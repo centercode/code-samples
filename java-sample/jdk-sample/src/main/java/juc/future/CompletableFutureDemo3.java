@@ -1,6 +1,6 @@
 package juc.future;
 
-import util.Threads;
+import utils.Threads;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
