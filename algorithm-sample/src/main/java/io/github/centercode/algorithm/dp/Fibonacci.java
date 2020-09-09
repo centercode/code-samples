@@ -2,8 +2,6 @@ package io.github.centercode.algorithm.dp;
 
 public class Fibonacci {
 
-
-
     public int solution1(int n) {
         if (n == 0) {
             return 0;
