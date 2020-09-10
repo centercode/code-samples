@@ -8,10 +8,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.URI;
-import java.nio.charset.StandardCharsets;
 
 /**
- * kill -31 $pid [on MacOS]
+ * http://localhost:8080/greet
  */
 public class MyHttpServer {
 
@@ -22,20 +21,21 @@ public class MyHttpServer {
     public static void main(String[] args) {
         MyHttpServer httpServer = new MyHttpServer();
         httpServer.start();
+        Runtime.getRuntime().addShutdownHook(new Thread(httpServer::stop));
     }
 
     public void start() {
         try {
-            server = HttpServer.create(new InetSocketAddress(5555), 50);
-            server.createContext("/demo", exchange -> {
+            //maxConnection=5
+            server = HttpServer.create(new InetSocketAddress(8080), 5);
+            server.createContext("/greet", exchange -> {
                 //request
                 URI uri = exchange.getRequestURI();
-                logger.info("Access url:" + uri);
+                logger.info("Request uri:" + uri);
                 //response
                 exchange.sendResponseHeaders(200, 0);
-                byte[] body = "hello world".getBytes(StandardCharsets.UTF_8);
                 try (OutputStream out = exchange.getResponseBody()) {
-                    out.write(body);
+                    out.write("hello world".getBytes());
                 }
             });
             server.start();
