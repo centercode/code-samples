@@ -12,6 +12,8 @@ public class IOUtils {
         return sw.toString();
     }
 
+    // Java 9: ByteStreams.toByteArray(InputStream)
+    //         InputStream.readAllBytes()
     public static byte[] readBytes(InputStream input) throws IOException {
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         copy(input, output);
