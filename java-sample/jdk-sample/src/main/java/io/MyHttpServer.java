@@ -30,7 +30,7 @@ public class MyHttpServer {
             server.createContext("/demo", exchange -> {
                 //request
                 URI uri = exchange.getRequestURI();
-                System.out.println("Access url:" + uri);
+                logger.info("Access url:" + uri);
                 //response
                 exchange.sendResponseHeaders(200, 0);
                 byte[] body = "hello world".getBytes(StandardCharsets.UTF_8);
