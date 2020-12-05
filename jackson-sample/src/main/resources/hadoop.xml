@@ -1,0 +1,12 @@
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>viewfs://cluster/</value>
+        <source>core-site.xml</source>
+    </property>
+    <property>
+        <name>dfs.replication</name>
+        <value>3</value>
+        <source>hdfs-site.xml</source>
+    </property>
+</configuration>
