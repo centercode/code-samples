@@ -8,12 +8,19 @@
     <artifactId>code-samples</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
-
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
     <modules>
         <module>algorithm-sample</module>
         <module>java-sample/jdk-sample</module>
         <module>hadoop-sample</module>
         <module>zookeeper-sample</module>
+        <module>jackson-sample</module>
+        <module>hbase-sample</module>
+        <module>spark-sample</module>
     </modules>
 
 </project>
