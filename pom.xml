@@ -21,6 +21,7 @@
         <module>jackson-sample</module>
         <module>hbase-sample</module>
         <module>spark-sample</module>
+        <module>windows-sample</module>
     </modules>
 
 </project>
