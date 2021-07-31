@@ -22,6 +22,11 @@
         <module>hbase-sample</module>
         <module>spark-sample</module>
         <module>windows-sample</module>
+        <module>hive-sample</module>
+<!--        <module>cli-sample</module>-->
+        <module>kudu-sample</module>
+<!--        <module>prometheus-sample</module>-->
+        <module>impala-sample</module>
     </modules>
 
 </project>
