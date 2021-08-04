@@ -8,9 +8,9 @@ public class ReversePrintListTest {
 
     @Test
     public void solution1() {
-        ReversePrintList.ListNode n1 = new ReversePrintList.ListNode(1);
-        ReversePrintList.ListNode n2 = new ReversePrintList.ListNode(3);
-        ReversePrintList.ListNode n3 = new ReversePrintList.ListNode(2);
+        ListNode n1 = new ListNode(1);
+        ListNode n2 = new ListNode(3);
+        ListNode n3 = new ListNode(2);
 
         n1.next = n2;
         n2.next = n3;
