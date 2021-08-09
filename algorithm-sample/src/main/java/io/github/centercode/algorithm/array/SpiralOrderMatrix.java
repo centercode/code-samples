@@ -8,7 +8,7 @@ package io.github.centercode.algorithm.array;
 class SpiralOrderMatrix {
 
     /**
-     * https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/solution/mian-shi-ti-29-shun-shi-zhen-da-yin-ju-zhen-she-di/
+     * ://problems/shun-shi-zhen-da-yin-ju-zhen-lcof/solution/mian-shi-ti-29-shun-shi-zhen-da-yin-ju-zhen-she-di/
      */
     public int[] solution1(int[][] matrix) {
         if (matrix.length == 0) return new int[0];
