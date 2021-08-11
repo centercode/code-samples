@@ -1,6 +1,7 @@
 package io.github.centercode.algorithm.tree;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -10,7 +11,7 @@ import java.util.Queue;
  */
 class LevelTraverse {
 
-    public int[] solution1(TreeNode root) {
+    public int[] case1Solution1(TreeNode root) {
         if (root == null) {
             return new int[0];
         }
@@ -32,5 +33,29 @@ class LevelTraverse {
         for (int i = 0; i < ans.size(); i++)
             res[i] = ans.get(i);
         return res;
+    }
+
+    public List<List<Integer>> case2Solution1(TreeNode root) {
+        if (root == null) {
+            return Collections.emptyList();
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        List<List<Integer>> result = new ArrayList<>();
+        while (!queue.isEmpty()) {
+            ArrayList<Integer> segment = new ArrayList<>();
+            for (int i = queue.size(); i > 0; i--) {
+                TreeNode node = queue.poll();
+                segment.add(node.val);
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+            }
+            result.add(segment);
+        }
+        return result;
     }
 }
