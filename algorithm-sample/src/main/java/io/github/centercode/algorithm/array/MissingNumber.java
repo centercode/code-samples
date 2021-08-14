@@ -14,4 +14,12 @@ class MissingNumber {
         }
         return i;
     }
+
+    public int solution2(int[] nums) {
+        int r = 0;
+        for (int i = 0; i < nums.length; i++) {
+            r += i - nums[i];
+        }
+        return r + nums.length;
+    }
 }
