@@ -17,7 +17,7 @@ public class CountInSortedArray {
         return right - left + 1;
     }
 
-    int binSearch(int[] nums, int i, int j, int target, boolean boundLeft) {
+    private int binSearch(int[] nums, int i, int j, int target, boolean boundLeft) {
         int ans = -1;
         while (i <= j) {
             int m = i + (j - i) / 2;
