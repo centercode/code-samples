@@ -1,7 +1,5 @@
 package lang;
 
-import java.util.Random;
-
 /**
  * "At run time, the result of the instanceof operator is true
  * if the value of the RelationalExpression is not null
@@ -15,29 +13,29 @@ import java.util.Random;
 public class InstanceOfSample {
 
     public static void main(final String[] args) {
-        for (int i = 0; i < 10; i++) {
-            isInstance();
-        }
+        isInstance(getNumber(1));
+        isInstance(getNumber(2));
+        isInstance(getNumber(3));
+        System.out.println("null instanceof Object: " + (null instanceof Object));
     }
 
-    private static void isInstance() {
-        Number val = getNumber();
+    private static void isInstance(Number val) {
         // Integer.class.isInstance(val)
         if (val instanceof Integer) {
-            System.out.println(val + " is instanceof Integer.");
+            System.out.println(val + " is instanceof Integer");
         } else {
-            System.out.println(val + " is NOT instanceof Integer!");
+            System.out.println(val + " is NOT instanceof Integer");
         }
     }
 
-    private static Number getNumber() {
-        Random random = new Random();
-        if (random.nextBoolean()) {
-            return Integer.MAX_VALUE;
-        } else if (random.nextBoolean()) {
-            return Long.MAX_VALUE;
-        } else {
-            return null;
+    private static Number getNumber(int type) {
+        switch (type) {
+            case 1:
+                return Integer.MAX_VALUE;
+            case 2:
+                return Long.MAX_VALUE;
+            default:
+                return null;
         }
     }
 

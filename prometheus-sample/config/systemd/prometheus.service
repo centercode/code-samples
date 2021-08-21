@@ -1,0 +1,22 @@
+[Unit]
+Description=Prometheus
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=prometheus
+Group=prometheus
+LimitCORE=infinity
+LimitNOFILE=200000
+Restart=on-failure
+RestartSec=30
+StartLimitInterval=120
+StartLimitBurst=3
+ExecStart=/home/prometheus/prometheus \
+    --config.file /home/prometheus/prometheus.yml \
+    --storage.tsdb.path=/home/prometheus/data \
+    --storage.tsdb.min-block-duration=5m \
+    --log.level=debug
+[Install]
+WantedBy=multi-user.target
