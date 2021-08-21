@@ -17,7 +17,7 @@ public class LevelTraverseTest {
         n20.left =n15;
         n20.right=n7;
         LevelTraverse levelTraverse = new LevelTraverse();
-        int[] result = levelTraverse.solution1(n3);
+        int[] result = levelTraverse.case1Solution1(n3);
         Assert.assertArrayEquals(new int[] {3,9,20,15,7}, result);
     }
 }
