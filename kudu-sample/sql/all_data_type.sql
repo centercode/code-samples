@@ -11,3 +11,6 @@ create table all_data_type(
     col10 BOOLEAN,
     primary key (col1)
 ) stored as kudu;
+
+INSERT INTO all_data_type VALUES
+  (1, 2, 3, 4, 5.5, 6.6, 7.77, '2008-08-08 08:00:00', "col9你好", true);
