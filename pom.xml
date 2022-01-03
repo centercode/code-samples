@@ -26,7 +26,6 @@
         <module>kudu-sample</module>
 <!--        <module>prometheus-sample</module>-->
         <module>impala-sample</module>
-        <module>jdbc-sample</module>
         <module>npm-sample</module>
     </modules>
 
