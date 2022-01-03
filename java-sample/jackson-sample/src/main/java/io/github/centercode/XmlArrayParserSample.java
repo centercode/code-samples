@@ -23,7 +23,7 @@ public class XmlArrayParserSample {
     }
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-        URI uri = ClassLoader.getSystemResource("hadoop.xml").toURI();
+        URI uri = ClassLoader.getSystemResource("array.xml").toURI();
         String xmlStr = new String(Files.readAllBytes(Paths.get(uri)), UTF_8);
         Configuration conf = mapper.readValue(xmlStr, Configuration.class);
         for (Property pair : conf.properties) {
@@ -34,7 +34,6 @@ public class XmlArrayParserSample {
     }
 
     static class Configuration {
-
         @JacksonXmlElementWrapper(useWrapping = false)
         @JacksonXmlProperty(localName = "property")
         private List<Property> properties;

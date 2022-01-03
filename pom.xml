@@ -18,7 +18,6 @@
         <module>java-sample/jdk-sample</module>
         <module>hadoop-sample</module>
         <module>zookeeper-sample</module>
-        <module>jackson-sample</module>
         <module>hbase-sample</module>
         <module>spark-sample</module>
         <module>windows-sample</module>
