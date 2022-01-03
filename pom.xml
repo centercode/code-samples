@@ -15,7 +15,6 @@
     </properties>
     <modules>
         <module>algorithm-sample</module>
-        <module>java-sample/jdk-sample</module>
         <module>hadoop-sample</module>
         <module>zookeeper-sample</module>
         <module>hbase-sample</module>
@@ -27,6 +26,7 @@
 <!--        <module>prometheus-sample</module>-->
         <module>impala-sample</module>
         <module>npm-sample</module>
+        <module>java-sample</module>
     </modules>
 
 </project>
