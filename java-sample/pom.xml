@@ -17,6 +17,7 @@
         <module>jdbc-sample</module>
         <module>guava-sample</module>
         <module>jackson-sample</module>
+        <module>junit-vintage-sample</module>
     </modules>
 
 </project>
