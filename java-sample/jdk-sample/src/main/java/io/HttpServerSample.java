@@ -12,14 +12,14 @@ import java.net.URI;
 /**
  * http://localhost:8080/greet
  */
-public class MyHttpServer {
+public class HttpServerSample {
 
-    private static Logger logger = LoggerFactory.getLogger(MyHttpServer.class);
+    private static Logger logger = LoggerFactory.getLogger(HttpServerSample.class);
 
     private HttpServer server;
 
     public static void main(String[] args) {
-        MyHttpServer httpServer = new MyHttpServer();
+        HttpServerSample httpServer = new HttpServerSample();
         httpServer.start();
         Runtime.getRuntime().addShutdownHook(new Thread(httpServer::stop));
     }

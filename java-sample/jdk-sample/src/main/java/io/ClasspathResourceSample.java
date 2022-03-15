@@ -3,7 +3,7 @@ package io;
 /**
  * http://codepub.cn/2015/04/22/How-to-load-resource-file-in-a-Jar-package-correctly/
  */
-public class ClassPathResource {
+public class ClasspathResourceSample {
 
     public void load() {
         // 1. 从加载该类的classLoader下获取;
