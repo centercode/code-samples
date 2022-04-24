@@ -17,4 +17,7 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <modules>
+        <module>maven-repository-sample</module>
+    </modules>
 </project>
