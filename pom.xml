@@ -27,6 +27,7 @@
         <module>impala-sample</module>
         <module>npm-sample</module>
         <module>java-sample</module>
+        <module>makefile-sample</module>
         <module>maven-sample</module>
     </modules>
 
