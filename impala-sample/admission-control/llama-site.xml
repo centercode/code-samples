@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property>
+        <name>llama.am.throttling.maximum.placed.reservations.root.default</name>
+        <value>100</value>
+    </property>
+    <property>
+        <name>llama.am.throttling.maximum.queued.reservations.root.default</name>
+        <value>200</value>
+    </property>
+    <property>
+        <name>impala.admission-control.pool-queue-timeout-ms.root.default</name>
+        <value>3600000</value>
+    </property>
+</configuration>
+<!--llama_site_path-->

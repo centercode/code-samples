@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<allocations>
+    <queue name="root">
+        <weight>1.0</weight>
+        <schedulingPolicy>fair</schedulingPolicy>
+        <queue name="default">
+            <maxResources>10240 mb, 0 vcores</maxResources>
+            <weight>1.0</weight>
+            <schedulingPolicy>fair</schedulingPolicy>
+        </queue>
+    </queue>
+    <defaultQueueSchedulingPolicy>fair</defaultQueueSchedulingPolicy>
+    <queuePlacementPolicy>
+        <rule name="specified" create="false"/>
+        <rule name="default"/>
+    </queuePlacementPolicy>
+</allocations>
+<!--fair_scheduler_allocation_path-->
