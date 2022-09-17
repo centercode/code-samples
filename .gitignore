@@ -16,6 +16,8 @@ CMakeFiles
 CTestTestfile.cmake
 Makefile
 Testing/
+install_manifest.txt
+*.cbp
 
 # CLion
 .cmake
