@@ -2,8 +2,9 @@ cmake_minimum_required(VERSION 3.0)
 project(cpp_std_sample)
 
 set(CMAKE_CXX_STANDARD 17)
+set(EXECUTABLE_OUTPUT_PATH build)
 
-add_executable(helloworld helloworld.cpp)
+add_executable(hello_world hello_world.cpp)
 add_executable(string string.cc)
 add_executable(bit bit.cc)
 add_executable(net.unix_socket.server net/unix_socket/server.c)
