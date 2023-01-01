@@ -3,9 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>code-samples</artifactId>
         <groupId>io.github.centercode</groupId>
+        <artifactId>code-samples</artifactId>
         <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
@@ -13,12 +14,19 @@
     <artifactId>java-sample</artifactId>
 
     <modules>
-        <module>jdk-sample</module>
-        <module>jdbc-sample</module>
+        <module>cup-sample</module>
+        <module>gson-sample</module>
         <module>guava-sample</module>
+        <module>httpclient-sample</module>
+        <module>ical4j-sample</module>
         <module>jackson-sample</module>
+        <module>jdbc-sample</module>
+        <module>jdk-sample</module>
+        <module>junit4-sample</module>
+        <module>junit5-sample</module>
         <module>junit-vintage-sample</module>
         <module>lunar-sample</module>
+        <module>powermock-sample</module>
     </modules>
 
 </project>

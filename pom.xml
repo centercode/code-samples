@@ -16,19 +16,19 @@
     <modules>
         <module>algorithm-sample</module>
         <module>hadoop-sample</module>
-        <module>zookeeper-sample</module>
         <module>hbase-sample</module>
-        <module>spark-sample</module>
-        <module>windows-sample</module>
         <module>hive-sample</module>
-        <!--<module>cli-sample</module>-->
-        <module>kudu-sample</module>
-        <module>prometheus-sample</module>
+        <module>iceberg-sample</module>
         <module>impala-sample</module>
-        <module>npm-sample</module>
         <module>java-sample</module>
+        <module>kudu-sample</module>
         <module>makefile-sample</module>
         <module>maven-sample</module>
+        <module>npm-sample</module>
+        <module>prometheus-sample</module>
+        <module>spark-sample</module>
+        <module>windows-sample</module>
+        <module>zookeeper-sample</module>
     </modules>
 
 </project>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>io.github.centercode</groupId>
+        <artifactId>java-sample</artifactId>
+        <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cup-sample</artifactId>
+
+    <repositories>
+        <repository>
+            <id>cdh.rcs.releases.repo</id>
+            <url>https://repository.cloudera.com/artifactory/cdh-releases-rcs</url>
+            <name>CDH Releases Repository</name>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.sourceforge.czt.dev</groupId>
+            <artifactId>java-cup</artifactId>
+            <version>0.11-a-czt02-cdh</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.czt.dev</groupId>
+            <artifactId>java-cup-runtime</artifactId>
+            <version>0.11-a-czt01-cdh</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.sourceforge.czt.dev</groupId>
+                <artifactId>cup-maven-plugin</artifactId>
+                <version>1.6-cdh</version>
+                <executions>
+                    <execution>
+                        <id>cup</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!--<className>SqlParser</className>-->
+                    <!--<symbolsName>SqlParserSymbols</symbolsName>-->
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

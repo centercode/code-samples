@@ -10,13 +10,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lunar-sample</artifactId>
+    <artifactId>gson-sample</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>cn.6tail</groupId>
-            <artifactId>lunar</artifactId>
-            <version>1.2.24</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10</version>
         </dependency>
     </dependencies>
 
