@@ -45,6 +45,9 @@ void UniquePtr1() {
   PrintIndex(p1.get());
   // copy constructor is deleted
   // unique_ptr<Numeric> p2 = p1;
+  unique_ptr<Numeric> p2(new Numeric(456));
+  p2.reset();
+  cout << "p2 was reset" << endl;
 } // p1 is deleted automatically when function block goes out of scope.
 
 void UniquePtr2() {
