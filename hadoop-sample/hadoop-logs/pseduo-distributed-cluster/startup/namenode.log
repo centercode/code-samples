@@ -1,0 +1,182 @@
+2023-02-16 23:51:19,291 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: STARTUP_MSG:
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = localhost.localdomain/127.0.1.1
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 3.3.1
+STARTUP_MSG:   classpath = /home/ubuntu/hadoop-3.3.1/etc/hadoop:/home/ubuntu/hadoop-3.3.1/share/hadoop/common/lib/kerb-core-1.0.1.jar:...
+STARTUP_MSG:   build = https://github.com/apache/hadoop.git -r a3b9c37a397ad4188041dd80621bdeefc46885f2; compiled by 'ubuntu' on 2021-06-15T05:13Z
+STARTUP_MSG:   java = 1.8.0_352
+************************************************************/
+2023-02-16 23:51:19,300 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2023-02-16 23:51:19,393 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: createNameNode []
+2023-02-16 23:51:19,512 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2023-02-16 23:51:19,607 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2023-02-16 23:51:19,607 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: NameNode metrics system started
+2023-02-16 23:51:19,638 INFO org.apache.hadoop.hdfs.server.namenode.NameNodeUtils: fs.defaultFS is hdfs://localhost:9000
+2023-02-16 23:51:19,638 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Clients should use localhost:9000 to access this namenode/service.
+2023-02-16 23:51:19,796 INFO org.apache.hadoop.util.JvmPauseMonitor: Starting JVM pause monitor
+2023-02-16 23:51:19,814 INFO org.apache.hadoop.hdfs.DFSUtil: Filter initializers set : org.apache.hadoop.http.lib.StaticUserWebFilter,org.apache.hadoop.hdfs.web.AuthFilterInitializer
+2023-02-16 23:51:19,819 INFO org.apache.hadoop.hdfs.DFSUtil: Starting Web-server for hdfs at: http://0.0.0.0:9870
+2023-02-16 23:51:19,828 INFO org.eclipse.jetty.util.log: Logging initialized @996ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-02-16 23:51:19,941 INFO org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2023-02-16 23:51:19,949 INFO org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.namenode is not defined
+2023-02-16 23:51:19,958 INFO org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2023-02-16 23:51:19,960 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context hdfs
+2023-02-16 23:51:19,960 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2023-02-16 23:51:19,960 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2023-02-16 23:51:19,965 INFO org.apache.hadoop.http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) to context hdfs
+2023-02-16 23:51:19,965 INFO org.apache.hadoop.http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) to context static
+2023-02-16 23:51:19,965 INFO org.apache.hadoop.http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) to context logs
+2023-02-16 23:51:19,990 INFO org.apache.hadoop.http.HttpServer2: addJerseyResourcePackage: packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, pathSpec=/webhdfs/v1/*
+2023-02-16 23:51:19,998 INFO org.apache.hadoop.http.HttpServer2: Jetty bound to port 9870
+2023-02-16 23:51:19,999 INFO org.eclipse.jetty.server.Server: jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 1.8.0_352-8u352-ga-1~20.04-b08
+2023-02-16 23:51:20,021 INFO org.eclipse.jetty.server.session: DefaultSessionIdManager workerName=node0
+2023-02-16 23:51:20,021 INFO org.eclipse.jetty.server.session: No SessionScavenger set, using defaults
+2023-02-16 23:51:20,022 INFO org.eclipse.jetty.server.session: node0 Scavenging every 660000ms
+2023-02-16 23:51:20,039 INFO org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2023-02-16 23:51:20,041 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@4d15107f{logs,/logs,file:///home/ubuntu/hadoop-3.3.1/logs/,AVAILABLE}
+2023-02-16 23:51:20,042 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@60f00693{static,/static,file:///home/ubuntu/hadoop-3.3.1/share/hadoop/hdfs/webapps/static/,AVAILABLE}
+2023-02-16 23:51:20,100 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.w.WebAppContext@5117dd67{hdfs,/,file:///home/ubuntu/hadoop-3.3.1/share/hadoop/hdfs/webapps/hdfs/,AVAILABLE}{file:/home/ubuntu/hadoop-3.3.1/share/hadoop/hdfs/webapps/hdfs}
+2023-02-16 23:51:20,106 INFO org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@4470fbd6{HTTP/1.1, (http/1.1)}{0.0.0.0:9870}
+2023-02-16 23:51:20,107 INFO org.eclipse.jetty.server.Server: Started @1275ms
+2023-02-16 23:51:20,343 WARN org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Only one image storage directory (dfs.namenode.name.dir) configured. Beware of data loss due to lack of redundant storage directories!
+2023-02-16 23:51:20,343 WARN org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Only one namespace edits storage directory (dfs.namenode.edits.dir) configured. Beware of data loss due to lack of redundant storage directories!
+2023-02-16 23:51:20,381 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edit logging is async:true
+2023-02-16 23:51:20,405 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: KeyProvider: null
+2023-02-16 23:51:20,406 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsLock is fair: true
+2023-02-16 23:51:20,406 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2023-02-16 23:51:20,411 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner                = ubuntu (auth:SIMPLE)
+2023-02-16 23:51:20,411 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup             = supergroup
+2023-02-16 23:51:20,411 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled    = true
+2023-02-16 23:51:20,411 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isStoragePolicyEnabled = true
+2023-02-16 23:51:20,411 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: HA Enabled: false
+2023-02-16 23:51:20,437 INFO org.apache.hadoop.hdfs.server.common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2023-02-16 23:51:20,445 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2023-02-16 23:51:20,445 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2023-02-16 23:51:20,448 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2023-02-16 23:51:20,448 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: The block deletion will start around 2023 Feb 16 23:51:20
+2023-02-16 23:51:20,449 INFO org.apache.hadoop.util.GSet: Computing capacity for map BlocksMap
+2023-02-16 23:51:20,449 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2023-02-16 23:51:20,450 INFO org.apache.hadoop.util.GSet: 2.0% max memory 875 MB = 17.5 MB
+2023-02-16 23:51:20,450 INFO org.apache.hadoop.util.GSet: capacity      = 2^21 = 2097152 entries
+2023-02-16 23:51:20,458 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Storage policy satisfier is disabled
+2023-02-16 23:51:20,458 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2023-02-16 23:51:20,464 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.999
+2023-02-16 23:51:20,464 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2023-02-16 23:51:20,464 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2023-02-16 23:51:20,465 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: defaultReplication         = 1
+2023-02-16 23:51:20,465 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplication             = 512
+2023-02-16 23:51:20,465 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: minReplication             = 1
+2023-02-16 23:51:20,465 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplicationStreams      = 2
+2023-02-16 23:51:20,465 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2023-02-16 23:51:20,465 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: encryptDataTransfer        = false
+2023-02-16 23:51:20,465 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2023-02-16 23:51:20,486 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2023-02-16 23:51:20,486 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2023-02-16 23:51:20,486 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2023-02-16 23:51:20,486 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2023-02-16 23:51:20,498 INFO org.apache.hadoop.util.GSet: Computing capacity for map INodeMap
+2023-02-16 23:51:20,498 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2023-02-16 23:51:20,499 INFO org.apache.hadoop.util.GSet: 1.0% max memory 875 MB = 8.8 MB
+2023-02-16 23:51:20,499 INFO org.apache.hadoop.util.GSet: capacity      = 2^20 = 1048576 entries
+2023-02-16 23:51:20,500 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: ACLs enabled? true
+2023-02-16 23:51:20,500 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2023-02-16 23:51:20,500 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: XAttrs enabled? true
+2023-02-16 23:51:20,500 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occurring more than 10 times
+2023-02-16 23:51:20,504 INFO org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2023-02-16 23:51:20,505 INFO org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: SkipList is disabled
+2023-02-16 23:51:20,508 INFO org.apache.hadoop.util.GSet: Computing capacity for map cachedBlocks
+2023-02-16 23:51:20,508 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2023-02-16 23:51:20,508 INFO org.apache.hadoop.util.GSet: 0.25% max memory 875 MB = 2.2 MB
+2023-02-16 23:51:20,508 INFO org.apache.hadoop.util.GSet: capacity      = 2^18 = 262144 entries
+2023-02-16 23:51:20,526 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2023-02-16 23:51:20,526 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2023-02-16 23:51:20,526 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2023-02-16 23:51:20,530 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Retry cache on namenode is enabled
+2023-02-16 23:51:20,530 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2023-02-16 23:51:20,532 INFO org.apache.hadoop.util.GSet: Computing capacity for map NameNodeRetryCache
+2023-02-16 23:51:20,532 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2023-02-16 23:51:20,532 INFO org.apache.hadoop.util.GSet: 0.029999999329447746% max memory 875 MB = 268.8 KB
+2023-02-16 23:51:20,532 INFO org.apache.hadoop.util.GSet: capacity      = 2^15 = 32768 entries
+2023-02-16 23:51:20,562 INFO org.apache.hadoop.hdfs.server.common.Storage: Lock on /tmp/hadoop-ubuntu/dfs/name/in_use.lock acquired by nodename 4189050@localhost.localdomain
+2023-02-16 23:51:20,581 INFO org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Recovering unfinalized segments in /tmp/hadoop-ubuntu/dfs/name/current
+2023-02-16 23:51:20,582 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: No edit log streams selected.
+2023-02-16 23:51:20,582 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Planning to load image: FSImageFile(file=/tmp/hadoop-ubuntu/dfs/name/current/fsimage_0000000000000000000, cpktTxId=0000000000000000000)
+2023-02-16 23:51:20,669 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatPBINode: Loading 1 INodes.
+2023-02-16 23:51:20,676 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatPBINode: Successfully loaded 1 inodes
+2023-02-16 23:51:20,684 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatPBINode: Completed update blocks map and name cache, total waiting duration 1ms.
+2023-02-16 23:51:20,692 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Loaded FSImage in 0 seconds.
+2023-02-16 23:51:20,692 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Loaded image for txid 0 from /tmp/hadoop-ubuntu/dfs/name/current/fsimage_0000000000000000000
+2023-02-16 23:51:20,697 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Need to save fs image? false (staleImage=false, haEnabled=false, isRollingUpgrade=false)
+2023-02-16 23:51:20,697 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Starting log segment at 1
+2023-02-16 23:51:20,823 INFO org.apache.hadoop.hdfs.server.namenode.NameCache: initialized with 0 entries 0 lookups
+2023-02-16 23:51:20,823 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Finished loading FSImage in 289 msecs
+2023-02-16 23:51:21,219 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: RPC server is binding to localhost:9000
+2023-02-16 23:51:21,219 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Enable NameNode state context:false
+2023-02-16 23:51:21,232 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 1000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2023-02-16 23:51:21,251 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 9000
+2023-02-16 23:51:21,530 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Registered FSNamesystemState, ReplicatedBlocksState and ECBlockGroupsState MBeans.
+2023-02-16 23:51:21,545 INFO org.apache.hadoop.hdfs.server.namenode.LeaseManager: Number of blocks under construction: 0
+2023-02-16 23:51:21,552 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeAdminDefaultMonitor: Initialized the Default Decommission and Maintenance monitor
+2023-02-16 23:51:21,555 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: initializing replication queues
+2023-02-16 23:51:21,555 INFO org.apache.hadoop.hdfs.StateChange: STATE* Leaving safe mode after 0 secs
+2023-02-16 23:51:21,555 INFO org.apache.hadoop.hdfs.StateChange: STATE* Network topology has 0 racks and 0 datanodes
+2023-02-16 23:51:21,555 INFO org.apache.hadoop.hdfs.StateChange: STATE* UnderReplicatedBlocks has 0 blocks
+2023-02-16 23:51:21,589 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Total number of blocks            = 0
+2023-02-16 23:51:21,589 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of invalid blocks          = 0
+2023-02-16 23:51:21,589 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of under-replicated blocks = 0
+2023-02-16 23:51:21,589 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of  over-replicated blocks = 0
+2023-02-16 23:51:21,589 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of blocks being written    = 0
+2023-02-16 23:51:21,589 INFO org.apache.hadoop.hdfs.StateChange: STATE* Replication Queue initialization scan for invalid, over- and under-replicated blocks completed in 23 msec
+2023-02-16 23:51:21,603 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2023-02-16 23:51:21,604 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 9000: starting
+2023-02-16 23:51:21,606 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: NameNode RPC up at: localhost/127.0.0.1:9000
+2023-02-16 23:51:21,609 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Starting services required for active state
+2023-02-16 23:51:21,609 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: Initializing quota with 12 thread(s)
+2023-02-16 23:51:21,615 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: Quota initialization completed in 5 milliseconds
+name space=1
+storage space=0
+storage types=RAM_DISK=0, SSD=0, DISK=0, ARCHIVE=0, PROVIDED=0
+2023-02-16 23:51:21,628 INFO org.apache.hadoop.hdfs.server.blockmanagement.CacheReplicationMonitor: Starting CacheReplicationMonitor with interval 30000 milliseconds
+2023-02-16 23:51:25,550 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(127.0.0.1:9866, datanodeUuid=936490c9-729d-4d42-b7a9-a71451a4a806, infoPort=9864, infoSecurePort=0, ipcPort=9867, storageInfo=lv=-57;cid=CID-f00aa786-3bff-443d-90de-a79038773345;nsid=580323512;c=1676561229854) storage 936490c9-729d-4d42-b7a9-a71451a4a806
+2023-02-16 23:51:25,551 INFO org.apache.hadoop.net.NetworkTopology: Adding a new node: /default-rack/127.0.0.1:9866
+2023-02-16 23:51:25,551 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockReportLeaseManager: Registered DN 936490c9-729d-4d42-b7a9-a71451a4a806 (127.0.0.1:9866).
+2023-02-16 23:51:25,644 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: Adding new storage ID DS-6308db3b-9ca1-4ec8-a96c-38cf53a21f7c for DN 127.0.0.1:9866
+2023-02-16 23:51:25,703 INFO BlockStateChange: BLOCK* processReport 0xfb674891b660e611: Processing first storage report for DS-6308db3b-9ca1-4ec8-a96c-38cf53a21f7c from datanode 936490c9-729d-4d42-b7a9-a71451a4a806
+2023-02-16 23:51:25,705 INFO BlockStateChange: BLOCK* processReport 0xfb674891b660e611: from storage DS-6308db3b-9ca1-4ec8-a96c-38cf53a21f7c node DatanodeRegistration(127.0.0.1:9866, datanodeUuid=936490c9-729d-4d42-b7a9-a71451a4a806, infoPort=9864, infoSecurePort=0, ipcPort=9867, storageInfo=lv=-57;cid=CID-f00aa786-3bff-443d-90de-a79038773345;nsid=580323512;c=1676561229854), blocks: 0, hasStaleStorage: false, processing time: 2 msecs, invalidatedBlocks: 0
+2023-02-16 23:52:27,456 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 127.0.0.1
+2023-02-16 23:52:27,456 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Rolling edit logs
+2023-02-16 23:52:27,456 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Ending log segment 1, 1
+2023-02-16 23:52:27,457 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 2 Total time for transactions(ms): 1 Number of transactions batched in Syncs: 0 Number of syncs: 2 SyncTimes(ms): 15
+2023-02-16 23:52:27,458 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 2 Total time for transactions(ms): 1 Number of transactions batched in Syncs: 0 Number of syncs: 3 SyncTimes(ms): 16
+2023-02-16 23:52:27,459 INFO org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Finalizing edits file /tmp/hadoop-ubuntu/dfs/name/current/edits_inprogress_0000000000000000001 -> /tmp/hadoop-ubuntu/dfs/name/current/edits_0000000000000000001-0000000000000000002
+2023-02-16 23:52:27,485 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Starting log segment at 3
+2023-02-16 23:52:27,658 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /tmp/hadoop-ubuntu/dfs/name/current/fsimage_0000000000000000000, fileSize: 401. Sent total: 401 bytes. Size of last segment intended to send: -1 bytes.
+2023-02-16 23:52:27,691 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /tmp/hadoop-ubuntu/dfs/name/current/edits_0000000000000000001-0000000000000000002, fileSize: 42. Sent total: 42 bytes. Size of last segment intended to send: -1 bytes.
+2023-02-16 23:52:27,921 INFO org.apache.hadoop.hdfs.server.namenode.ImageServlet: Rejecting a fsimage due to small time delta and txnid delta. Time since previous checkpoint is 1517 expecting at least 2700 txnid delta since previous checkpoint is 2 expecting at least 1000000
+2023-02-17 00:50:16,682 INFO BlockStateChange: BLOCK* processReport 0xfb674891b660e612: from storage DS-6308db3b-9ca1-4ec8-a96c-38cf53a21f7c node DatanodeRegistration(127.0.0.1:9866, datanodeUuid=936490c9-729d-4d42-b7a9-a71451a4a806, infoPort=9864, infoSecurePort=0, ipcPort=9867, storageInfo=lv=-57;cid=CID-f00aa786-3bff-443d-90de-a79038773345;nsid=580323512;c=1676561229854), blocks: 0, hasStaleStorage: false, processing time: 1 msecs, invalidatedBlocks: 0
+2023-02-17 00:52:28,221 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 127.0.0.1
+2023-02-17 00:52:28,221 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Rolling edit logs
+2023-02-17 00:52:28,221 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Ending log segment 3, 3
+2023-02-17 00:52:28,222 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 2 Total time for transactions(ms): 2 Number of transactions batched in Syncs: 0 Number of syncs: 2 SyncTimes(ms): 14
+2023-02-17 00:52:28,223 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 2 Total time for transactions(ms): 2 Number of transactions batched in Syncs: 0 Number of syncs: 3 SyncTimes(ms): 15
+2023-02-17 00:52:28,224 INFO org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Finalizing edits file /tmp/hadoop-ubuntu/dfs/name/current/edits_inprogress_0000000000000000003 -> /tmp/hadoop-ubuntu/dfs/name/current/edits_0000000000000000003-0000000000000000004
+2023-02-17 00:52:28,224 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Starting log segment at 5
+2023-02-17 00:52:28,256 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /tmp/hadoop-ubuntu/dfs/name/current/fsimage_0000000000000000000, fileSize: 401. Sent total: 401 bytes. Size of last segment intended to send: -1 bytes.
+2023-02-17 00:52:28,277 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /tmp/hadoop-ubuntu/dfs/name/current/edits_0000000000000000003-0000000000000000004, fileSize: 42. Sent total: 42 bytes. Size of last segment intended to send: -1 bytes.
+2023-02-17 00:52:28,323 INFO org.apache.hadoop.hdfs.server.common.Util: Combined time for file download and fsync to all disks took 0.00s. The file download took 0.00s at 0.00 KB/s. Synchronous (fsync) write to disk of /tmp/hadoop-ubuntu/dfs/name/current/fsimage.ckpt_0000000000000000004 took 0.00s.
+2023-02-17 00:52:28,323 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file fsimage.ckpt_0000000000000000004 size 401 bytes.
+2023-02-17 00:52:28,328 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Going to retain 2 images with txid >= 0
+2023-02-17 01:52:28,606 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 127.0.0.1
+2023-02-17 01:52:28,606 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Rolling edit logs
+2023-02-17 01:52:28,606 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Ending log segment 5, 5
+2023-02-17 01:52:28,606 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 2 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 2 SyncTimes(ms): 14
+2023-02-17 01:52:28,610 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 2 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 3 SyncTimes(ms): 18
+2023-02-17 01:52:28,611 INFO org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Finalizing edits file /tmp/hadoop-ubuntu/dfs/name/current/edits_inprogress_0000000000000000005 -> /tmp/hadoop-ubuntu/dfs/name/current/edits_0000000000000000005-0000000000000000006
+2023-02-17 01:52:28,611 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Starting log segment at 7
+2023-02-17 01:52:28,636 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /tmp/hadoop-ubuntu/dfs/name/current/edits_0000000000000000005-0000000000000000006, fileSize: 42. Sent total: 42 bytes. Size of last segment intended to send: -1 bytes.
+2023-02-17 01:52:28,675 INFO org.apache.hadoop.hdfs.server.common.Util: Combined time for file download and fsync to all disks took 0.00s. The file download took 0.00s at 0.00 KB/s. Synchronous (fsync) write to disk of /tmp/hadoop-ubuntu/dfs/name/current/fsimage.ckpt_0000000000000000006 took 0.00s.
+2023-02-17 01:52:28,675 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file fsimage.ckpt_0000000000000000006 size 401 bytes.
+2023-02-17 01:52:28,681 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Going to retain 2 images with txid >= 4
+2023-02-17 01:52:28,681 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Purging old image FSImageFile(file=/tmp/hadoop-ubuntu/dfs/name/current/fsimage_0000000000000000000, cpktTxId=0000000000000000000)

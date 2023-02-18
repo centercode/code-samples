@@ -1,0 +1,111 @@
+2023-02-16 23:51:22,141 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: STARTUP_MSG:
+/************************************************************
+STARTUP_MSG: Starting DataNode
+STARTUP_MSG:   host = localhost.localdomain/127.0.1.1
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 3.3.1
+STARTUP_MSG:   classpath = /home/ubuntu/hadoop-3.3.1/etc/hadoop:/home/ubuntu/hadoop-3.3.1/share/hadoop/common/lib/kerb-core-1.0.1.jar:...
+STARTUP_MSG:   build = https://github.com/apache/hadoop.git -r a3b9c37a397ad4188041dd80621bdeefc46885f2; compiled by 'ubuntu' on 2021-06-15T05:13Z
+STARTUP_MSG:   java = 1.8.0_352
+************************************************************/
+2023-02-16 23:51:22,149 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2023-02-16 23:51:22,574 INFO org.apache.hadoop.hdfs.server.datanode.checker.ThrottledAsyncChecker: Scheduling a check for [DISK]file:/tmp/hadoop-ubuntu/dfs/data
+2023-02-16 23:51:22,664 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2023-02-16 23:51:22,732 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2023-02-16 23:51:22,732 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: DataNode metrics system started
+2023-02-16 23:51:22,956 INFO org.apache.hadoop.hdfs.server.common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2023-02-16 23:51:22,969 INFO org.apache.hadoop.hdfs.server.datanode.BlockScanner: Initialized block scanner with targetBytesPerSec 1048576
+2023-02-16 23:51:22,975 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Configured hostname is localhost.localdomain
+2023-02-16 23:51:22,975 INFO org.apache.hadoop.hdfs.server.common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2023-02-16 23:51:22,979 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Starting DataNode with maxLockedMemory = 0
+2023-02-16 23:51:22,998 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Opened streaming server at /0.0.0.0:9866
+2023-02-16 23:51:23,000 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Balancing bandwidth is 104857600 bytes/s
+2023-02-16 23:51:23,000 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Number threads for balancing is 100
+2023-02-16 23:51:23,047 INFO org.eclipse.jetty.util.log: Logging initialized @1609ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-02-16 23:51:23,156 INFO org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2023-02-16 23:51:23,164 INFO org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.datanode is not defined
+2023-02-16 23:51:23,217 INFO org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2023-02-16 23:51:23,222 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context datanode
+2023-02-16 23:51:23,222 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2023-02-16 23:51:23,222 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2023-02-16 23:51:23,249 INFO org.apache.hadoop.http.HttpServer2: Jetty bound to port 37603
+2023-02-16 23:51:23,249 INFO org.eclipse.jetty.server.Server: jetty-9.4.40.v20210413; built: 2021-04-13T20:42:42.668Z; git: b881a572662e1943a14ae12e7e1207989f218b74; jvm 1.8.0_352-8u352-ga-1~20.04-b08
+2023-02-16 23:51:23,268 INFO org.eclipse.jetty.server.session: DefaultSessionIdManager workerName=node0
+2023-02-16 23:51:23,268 INFO org.eclipse.jetty.server.session: No SessionScavenger set, using defaults
+2023-02-16 23:51:23,270 INFO org.eclipse.jetty.server.session: node0 Scavenging every 600000ms
+2023-02-16 23:51:23,281 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@1ef6d34c{logs,/logs,file:///home/ubuntu/hadoop-3.3.1/logs/,AVAILABLE}
+2023-02-16 23:51:23,282 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@5495333e{static,/static,file:///home/ubuntu/hadoop-3.3.1/share/hadoop/hdfs/webapps/static/,AVAILABLE}
+2023-02-16 23:51:23,375 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.w.WebAppContext@7a1234bf{datanode,/,file:///home/ubuntu/hadoop-3.3.1/share/hadoop/hdfs/webapps/datanode/,AVAILABLE}{file:/home/ubuntu/hadoop-3.3.1/share/hadoop/hdfs/webapps/datanode}
+2023-02-16 23:51:23,383 INFO org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@6c0d7c83{HTTP/1.1, (http/1.1)}{localhost:37603}
+2023-02-16 23:51:23,383 INFO org.eclipse.jetty.server.Server: Started @1945ms
+2023-02-16 23:51:23,548 WARN org.apache.hadoop.hdfs.server.datanode.web.DatanodeHttpServer: Got null for restCsrfPreventionFilter - will not do any filtering.
+2023-02-16 23:51:23,734 INFO org.apache.hadoop.hdfs.server.datanode.web.DatanodeHttpServer: Listening HTTP traffic on /0.0.0.0:9864
+2023-02-16 23:51:23,741 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: dnUserName = ubuntu
+2023-02-16 23:51:23,741 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: supergroup = supergroup
+2023-02-16 23:51:23,750 INFO org.apache.hadoop.util.JvmPauseMonitor: Starting JVM pause monitor
+2023-02-16 23:51:23,807 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 1000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2023-02-16 23:51:23,827 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 9867
+2023-02-16 23:51:24,119 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Opened IPC server at /0.0.0.0:9867
+2023-02-16 23:51:24,193 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Refresh request received for nameservices: null
+2023-02-16 23:51:24,209 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Starting BPOfferServices for nameservices: <default>
+2023-02-16 23:51:24,254 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Block pool <registering> (Datanode Uuid unassigned) service to localhost/127.0.0.1:9000 starting to offer service
+2023-02-16 23:51:24,278 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2023-02-16 23:51:24,279 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 9867: starting
+2023-02-16 23:51:24,870 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Acknowledging ACTIVE Namenode during handshakeBlock pool <registering> (Datanode Uuid unassigned) service to localhost/127.0.0.1:9000
+2023-02-16 23:51:24,872 INFO org.apache.hadoop.hdfs.server.common.Storage: Using 1 threads to upgrade data directories (dfs.datanode.parallel.volumes.load.threads.num=1, dataDirs=1)
+2023-02-16 23:51:24,886 INFO org.apache.hadoop.hdfs.server.common.Storage: Lock on /tmp/hadoop-ubuntu/dfs/data/in_use.lock acquired by nodename 4189217@localhost.localdomain
+2023-02-16 23:51:24,888 INFO org.apache.hadoop.hdfs.server.common.Storage: Storage directory with location [DISK]file:/tmp/hadoop-ubuntu/dfs/data is not formatted for namespace 580323512. Formatting...
+2023-02-16 23:51:24,888 INFO org.apache.hadoop.hdfs.server.common.Storage: Generated new storageID DS-6308db3b-9ca1-4ec8-a96c-38cf53a21f7c for directory /tmp/hadoop-ubuntu/dfs/data
+2023-02-16 23:51:24,929 INFO org.apache.hadoop.hdfs.server.common.Storage: Analyzing storage directories for bpid BP-1905573309-127.0.1.1-1676561229854
+2023-02-16 23:51:24,929 INFO org.apache.hadoop.hdfs.server.common.Storage: Locking is disabled for /tmp/hadoop-ubuntu/dfs/data/current/BP-1905573309-127.0.1.1-1676561229854
+2023-02-16 23:51:24,930 INFO org.apache.hadoop.hdfs.server.common.Storage: Block pool storage directory for location [DISK]file:/tmp/hadoop-ubuntu/dfs/data and block pool id BP-1905573309-127.0.1.1-1676561229854 is not formatted. Formatting ...
+2023-02-16 23:51:24,930 INFO org.apache.hadoop.hdfs.server.common.Storage: Formatting block pool BP-1905573309-127.0.1.1-1676561229854 directory /tmp/hadoop-ubuntu/dfs/data/current/BP-1905573309-127.0.1.1-1676561229854/current
+2023-02-16 23:51:24,940 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Setting up storage: nsid=580323512;bpid=BP-1905573309-127.0.1.1-1676561229854;lv=-57;nsInfo=lv=-66;cid=CID-f00aa786-3bff-443d-90de-a79038773345;nsid=580323512;c=1676561229854;bpid=BP-1905573309-127.0.1.1-1676561229854;dnuuid=null
+2023-02-16 23:51:24,948 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Generated and persisted new Datanode UUID 936490c9-729d-4d42-b7a9-a71451a4a806
+2023-02-16 23:51:24,982 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: The datanode lock is a read write lock
+2023-02-16 23:51:25,229 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Added new volume: DS-6308db3b-9ca1-4ec8-a96c-38cf53a21f7c
+2023-02-16 23:51:25,229 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Added volume - [DISK]file:/tmp/hadoop-ubuntu/dfs/data, StorageType: DISK
+2023-02-16 23:51:25,233 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.MemoryMappableBlockLoader: Initializing cache loader: MemoryMappableBlockLoader.
+2023-02-16 23:51:25,242 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Registered FSDatasetState MBean
+2023-02-16 23:51:25,251 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Adding block pool BP-1905573309-127.0.1.1-1676561229854
+2023-02-16 23:51:25,258 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Scanning block pool BP-1905573309-127.0.1.1-1676561229854 on volume /tmp/hadoop-ubuntu/dfs/data...
+2023-02-16 23:51:25,355 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Time taken to scan block pool BP-1905573309-127.0.1.1-1676561229854 on /tmp/hadoop-ubuntu/dfs/data: 97ms
+2023-02-16 23:51:25,355 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Total time to scan all replicas for block pool BP-1905573309-127.0.1.1-1676561229854: 104ms
+2023-02-16 23:51:25,356 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Adding replicas to map for block pool BP-1905573309-127.0.1.1-1676561229854 on volume /tmp/hadoop-ubuntu/dfs/data...
+2023-02-16 23:51:25,356 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.BlockPoolSlice: Replica Cache file: /tmp/hadoop-ubuntu/dfs/data/current/BP-1905573309-127.0.1.1-1676561229854/current/replicas doesn't exist
+2023-02-16 23:51:25,362 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Time to add replicas to map for block pool BP-1905573309-127.0.1.1-1676561229854 on volume /tmp/hadoop-ubuntu/dfs/data: 6ms
+2023-02-16 23:51:25,362 INFO org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl: Total time to add all replicas to map for block pool BP-1905573309-127.0.1.1-1676561229854: 6ms
+2023-02-16 23:51:25,362 INFO org.apache.hadoop.hdfs.server.datanode.checker.ThrottledAsyncChecker: Scheduling a check for /tmp/hadoop-ubuntu/dfs/data
+2023-02-16 23:51:25,370 INFO org.apache.hadoop.hdfs.server.datanode.checker.DatasetVolumeChecker: Scheduled health check for volume /tmp/hadoop-ubuntu/dfs/data
+2023-02-16 23:51:25,374 INFO org.apache.hadoop.hdfs.server.datanode.VolumeScanner: Now scanning bpid BP-1905573309-127.0.1.1-1676561229854 on volume /tmp/hadoop-ubuntu/dfs/data
+2023-02-16 23:51:25,376 INFO org.apache.hadoop.hdfs.server.datanode.VolumeScanner: VolumeScanner(/tmp/hadoop-ubuntu/dfs/data, DS-6308db3b-9ca1-4ec8-a96c-38cf53a21f7c): finished scanning block pool BP-1905573309-127.0.1.1-1676561229854
+2023-02-16 23:51:25,381 WARN org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: dfs.datanode.directoryscan.throttle.limit.ms.per.sec set to value above 1000 ms/sec. Assuming default value of -1
+2023-02-16 23:51:25,381 INFO org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Periodic Directory Tree Verification scan starting in 12596ms with interval of 21600000ms and throttle limit of -1ms/s
+2023-02-16 23:51:25,393 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Block pool BP-1905573309-127.0.1.1-1676561229854 (Datanode Uuid 936490c9-729d-4d42-b7a9-a71451a4a806) service to localhost/127.0.0.1:9000 beginning handshake with NN
+2023-02-16 23:51:25,425 INFO org.apache.hadoop.hdfs.server.datanode.VolumeScanner: VolumeScanner(/tmp/hadoop-ubuntu/dfs/data, DS-6308db3b-9ca1-4ec8-a96c-38cf53a21f7c): no suitable block pools found to scan.  Waiting 1814399949 ms.
+2023-02-16 23:51:25,567 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Block pool BP-1905573309-127.0.1.1-1676561229854 (Datanode Uuid 936490c9-729d-4d42-b7a9-a71451a4a806) service to localhost/127.0.0.1:9000 successfully registered with NN
+2023-02-16 23:51:25,567 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: For namenode localhost/127.0.0.1:9000 using BLOCKREPORT_INTERVAL of 21600000msecs CACHEREPORT_INTERVAL of 10000msecs Initial delay: 0msecs; heartBeatInterval=3000
+2023-02-16 23:51:25,731 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Successfully sent block report 0xfb674891b660e611 to namenode: localhost/127.0.0.1:9000,  containing 1 storage report(s), of which we sent 1. The reports had 0 total blocks and used 1 RPC(s). This took 6 msecs to generate and 59 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2023-02-16 23:51:25,731 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Got finalize command for block pool BP-1905573309-127.0.1.1-1676561229854
+2023-02-16 23:51:37,986 INFO org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Scan Results: BlockPool BP-1905573309-127.0.1.1-1676561229854 Total blocks: 0, missing metadata files: 0, missing block files: 0, missing blocks in memory: 0, mismatched blocks: 0
+2023-02-17 00:50:16,683 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Successfully sent block report 0xfb674891b660e612 to namenode: localhost/127.0.0.1:9000,  containing 1 storage report(s), of which we sent 1. The reports had 0 total blocks and used 1 RPC(s). This took 0 msecs to generate and 2 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2023-02-17 00:50:16,683 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Got finalize command for block pool BP-1905573309-127.0.1.1-1676561229854
+2023-02-17 05:51:37,978 INFO org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Scan Results: BlockPool BP-1905573309-127.0.1.1-1676561229854 Total blocks: 0, missing metadata files: 0, missing block files: 0, missing blocks in memory: 0, mismatched blocks: 0
+2023-02-17 06:50:17,293 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Successfully sent block report 0xfb674891b660e613 to namenode: localhost/127.0.0.1:9000,  containing 1 storage report(s), of which we sent 1. The reports had 0 total blocks and used 1 RPC(s). This took 0 msecs to generate and 2 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2023-02-17 06:50:17,293 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Got finalize command for block pool BP-1905573309-127.0.1.1-1676561229854
+2023-02-17 11:51:37,978 INFO org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Scan Results: BlockPool BP-1905573309-127.0.1.1-1676561229854 Total blocks: 0, missing metadata files: 0, missing block files: 0, missing blocks in memory: 0, mismatched blocks: 0
+2023-02-17 12:50:17,888 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Successfully sent block report 0xfb674891b660e614 to namenode: localhost/127.0.0.1:9000,  containing 1 storage report(s), of which we sent 1. The reports had 0 total blocks and used 1 RPC(s). This took 0 msecs to generate and 1 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2023-02-17 12:50:17,888 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Got finalize command for block pool BP-1905573309-127.0.1.1-1676561229854
+2023-02-17 17:51:37,978 INFO org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Scan Results: BlockPool BP-1905573309-127.0.1.1-1676561229854 Total blocks: 0, missing metadata files: 0, missing block files: 0, missing blocks in memory: 0, mismatched blocks: 0
+2023-02-17 18:50:18,460 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Successfully sent block report 0xfb674891b660e615 to namenode: localhost/127.0.0.1:9000,  containing 1 storage report(s), of which we sent 1. The reports had 0 total blocks and used 1 RPC(s). This took 0 msecs to generate and 1 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2023-02-17 18:50:18,460 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Got finalize command for block pool BP-1905573309-127.0.1.1-1676561229854
+2023-02-17 23:51:37,978 INFO org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Scan Results: BlockPool BP-1905573309-127.0.1.1-1676561229854 Total blocks: 0, missing metadata files: 0, missing block files: 0, missing blocks in memory: 0, mismatched blocks: 0
+2023-02-18 00:50:19,083 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Successfully sent block report 0xfb674891b660e616 to namenode: localhost/127.0.0.1:9000,  containing 1 storage report(s), of which we sent 1. The reports had 0 total blocks and used 1 RPC(s). This took 0 msecs to generate and 1 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2023-02-18 00:50:19,083 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Got finalize command for block pool BP-1905573309-127.0.1.1-1676561229854
+2023-02-18 05:51:37,978 INFO org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Scan Results: BlockPool BP-1905573309-127.0.1.1-1676561229854 Total blocks: 0, missing metadata files: 0, missing block files: 0, missing blocks in memory: 0, mismatched blocks: 0
+2023-02-18 06:50:16,661 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Successfully sent block report 0xfb674891b660e617 to namenode: localhost/127.0.0.1:9000,  containing 1 storage report(s), of which we sent 1. The reports had 0 total blocks and used 1 RPC(s). This took 0 msecs to generate and 1 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2023-02-18 06:50:16,662 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Got finalize command for block pool BP-1905573309-127.0.1.1-1676561229854
+2023-02-18 11:51:37,978 INFO org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Scan Results: BlockPool BP-1905573309-127.0.1.1-1676561229854 Total blocks: 0, missing metadata files: 0, missing block files: 0, missing blocks in memory: 0, mismatched blocks: 0
+2023-02-18 12:50:17,249 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Successfully sent block report 0xfb674891b660e618 to namenode: localhost/127.0.0.1:9000,  containing 1 storage report(s), of which we sent 1. The reports had 0 total blocks and used 1 RPC(s). This took 0 msecs to generate and 1 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2023-02-18 12:50:17,249 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Got finalize command for block pool BP-1905573309-127.0.1.1-1676561229854
+2023-02-18 17:51:37,978 INFO org.apache.hadoop.hdfs.server.datanode.DirectoryScanner: Scan Results: BlockPool BP-1905573309-127.0.1.1-1676561229854 Total blocks: 0, missing metadata files: 0, missing block files: 0, missing blocks in memory: 0, mismatched blocks: 0
