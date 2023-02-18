@@ -1,0 +1,5 @@
+2023-02-18 19:06:06,611 ERROR org.apache.hadoop.hdfs.server.namenode.NameNode: RECEIVED SIGNAL 15: SIGTERM
+2023-02-18 19:06:06,615 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: SHUTDOWN_MSG:
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at localhost.localdomain/127.0.1.1
+************************************************************/

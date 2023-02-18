@@ -1,0 +1,49 @@
+2023-02-18 19:06:10,184 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: RECEIVED SIGNAL 15: SIGTERM
+2023-02-18 19:06:10,186 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=8 when meet shutdown.
+2023-02-18 19:06:10,186 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=12 when meet shutdown.
+2023-02-18 19:06:10,186 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=86 when meet shutdown.
+2023-02-18 19:06:10,187 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=56 when meet shutdown.
+2023-02-18 19:06:10,187 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=28 when meet shutdown.
+2023-02-18 19:06:10,187 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=2 when meet shutdown.
+2023-02-18 19:06:10,187 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=42 when meet shutdown.
+2023-02-18 19:06:10,187 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=32 when meet shutdown.
+2023-02-18 19:06:10,188 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=40 when meet shutdown.
+2023-02-18 19:06:10,188 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=44 when meet shutdown.
+2023-02-18 19:06:10,188 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=10 when meet shutdown.
+2023-02-18 19:06:10,189 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=26 when meet shutdown.
+2023-02-18 19:06:10,189 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=74 when meet shutdown.
+2023-02-18 19:06:10,189 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=22 when meet shutdown.
+2023-02-18 19:06:10,189 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=66 when meet shutdown.
+2023-02-18 19:06:10,189 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=36 when meet shutdown.
+2023-02-18 19:06:10,189 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=68 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=34 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=24 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=70 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=20 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=50 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=58 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=60 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=76 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=4 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=16 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=48 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=52 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=6 when meet shutdown.
+2023-02-18 19:06:10,190 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=54 when meet shutdown.
+2023-02-18 19:06:10,191 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=84 when meet shutdown.
+2023-02-18 19:06:10,191 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=80 when meet shutdown.
+2023-02-18 19:06:10,191 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=82 when meet shutdown.
+2023-02-18 19:06:10,191 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=62 when meet shutdown.
+2023-02-18 19:06:10,192 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=30 when meet shutdown.
+2023-02-18 19:06:10,192 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=14 when meet shutdown.
+2023-02-18 19:06:10,192 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=18 when meet shutdown.
+2023-02-18 19:06:10,192 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=151 when meet shutdown.
+2023-02-18 19:06:10,192 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=64 when meet shutdown.
+2023-02-18 19:06:10,192 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=72 when meet shutdown.
+2023-02-18 19:06:10,192 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=38 when meet shutdown.
+2023-02-18 19:06:10,192 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=46 when meet shutdown.
+2023-02-18 19:06:10,192 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: FSImageSaver clean checkpoint: txid=78 when meet shutdown.
+2023-02-18 19:06:10,192 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: SHUTDOWN_MSG:
+/************************************************************
+SHUTDOWN_MSG: Shutting down SecondaryNameNode at localhost.localdomain/127.0.1.1
+************************************************************/

@@ -1,0 +1,5 @@
+2023-02-18 19:06:08,050 ERROR org.apache.hadoop.hdfs.server.datanode.DataNode: RECEIVED SIGNAL 15: SIGTERM
+2023-02-18 19:06:08,053 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: SHUTDOWN_MSG:
+/************************************************************
+SHUTDOWN_MSG: Shutting down DataNode at localhost.localdomain/127.0.1.1
+************************************************************/
