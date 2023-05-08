@@ -14,5 +14,6 @@
 
     <modules>
         <module>maven-repository-sample</module>
+        <module>maven-takari-sample</module>
     </modules>
 </project>
