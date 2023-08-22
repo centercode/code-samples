@@ -66,6 +66,14 @@
                     <outputDirectory>${project.build.directory}/generated-sources/cup</outputDirectory>
                     <className>Parser</className>
                     <symbolsName>sym</symbolsName>
+<!--                    <dumpStates>true</dumpStates>-->
+<!--                    <dumpGrammar>true</dumpGrammar>-->
+<!--                    <dumpTables>true</dumpTables>-->
+<!--                    <showProgress>true</showProgress>-->
+<!--                    <debug>true</debug>-->
+<!--                    <timeSummary>true</timeSummary>-->
+<!--                    <noScanner>true</noScanner>-->
+<!--                    <nontermsToSymbols>true</nontermsToSymbols>-->
                 </configuration>
             </plugin>
 
