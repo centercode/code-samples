@@ -50,6 +50,14 @@ public class SortTest {
     }
 
     @Test
+    public void testInsertSort() {
+        InsertSort sorter = new InsertSort();
+        int[] copy = Arrays.copyOf(data, data.length);
+        sorter.sort(copy);
+        Assert.assertArrayEquals(expect, copy);
+    }
+
+    @Test
     public void testQuickSort() {
         QuickSort sorter = new QuickSort();
         int[] copy = Arrays.copyOf(data, data.length);
