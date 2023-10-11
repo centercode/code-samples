@@ -64,4 +64,12 @@ public class SortTest {
         sorter.sort(copy);
         Assert.assertArrayEquals(expect, copy);
     }
+
+    @Test
+    public void testCountingSort() {
+        CountingSort sorter = new CountingSort();
+        int[] copy = Arrays.copyOf(data, data.length);
+        sorter.sort(copy);
+        Assert.assertArrayEquals(expect, copy);
+    }
 }
