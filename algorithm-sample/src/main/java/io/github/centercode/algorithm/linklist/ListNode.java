@@ -1,5 +1,7 @@
 package io.github.centercode.algorithm.linklist;
 
+import java.util.StringJoiner;
+
 public class ListNode {
 
     public int val;
@@ -8,6 +10,17 @@ public class ListNode {
 
     public ListNode(int x) {
         val = x;
+    }
+
+    @Override
+    public String toString() {
+        StringJoiner joiner = new StringJoiner(",", "[", "]");
+        ListNode head = this;
+        while (head != null) {
+            joiner.add(String.valueOf(head.val));
+            head = head.next;
+        }
+        return joiner.toString();
     }
 
     public ListNode deleteNode(ListNode head, int val) {

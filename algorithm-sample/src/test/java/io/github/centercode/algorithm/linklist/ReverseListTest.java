@@ -1,19 +1,34 @@
 package io.github.centercode.algorithm.linklist;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class ReverseListTest {
 
-    @Test
-    public void solution1() {
-        ReverseList.ListNode<Integer> n1 = new ReverseList.ListNode<>(1);
-        ReverseList.ListNode<Integer> n2 = new ReverseList.ListNode<>(2);
-        ReverseList.ListNode<Integer> n3 = new ReverseList.ListNode<>(3);
-        n1.setNext(n2);
-        n2.setNext(n3);
-        System.out.println("Input:" + ReverseList.ListNode.print(n1));
+    ReverseList reverseList = new ReverseList();
 
-        ReverseList.ListNode<Integer> head = ReverseList.solution2(n1);
-        System.out.println("Output:" + ReverseList.ListNode.print(head));
+    @Test
+    public void case1Solution1() {
+        ListNode n1 = new ListNode(1);
+        n1.next = new ListNode(2);
+        n1.next.next = new ListNode(3);
+        Assert.assertEquals("[3,2,1]", reverseList.case1Solution1(n1).toString());
+    }
+
+    @Test
+    public void case2Solution1() {
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+        Assert.assertEquals("[2,1,4,3,5]", reverseList.case2Solution1(head, 2).toString());
+
+        head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+        Assert.assertEquals("[3,2,1,4,5]", reverseList.case2Solution1(head, 3).toString());
     }
 }

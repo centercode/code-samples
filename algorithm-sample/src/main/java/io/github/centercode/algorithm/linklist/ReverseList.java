@@ -1,74 +1,77 @@
 package io.github.centercode.algorithm.linklist;
 
-import java.util.StringJoiner;
-
 /**
  * 反转链表
- * https://leetcode-cn.com/articles/reverse-linked-list/
  */
 public class ReverseList {
 
     /**
-     * 迭代版本
+     * 206. 反转链表
+     * 解法一：迭代版本
      */
-    static ListNode<Integer> solution1(ListNode<Integer> head) {
-        if (head == null || head.getNext() == null) {
-            return head;
+    ListNode case1Solution1(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
         }
-        ListNode<Integer> offset = head.getNext();
-        head.setNext(null);
-        while (offset != null) {
-            ListNode<Integer> nextOffset = offset.getNext();
-            //offset替换为头节点
-            offset.setNext(head);
-            head = offset;
-            //游标前移
-            offset = nextOffset;
-        }
-
-        return head;
+        return prev;
     }
 
     /**
-     * 递归版本
+     * 解法二：递归版本
      *
-     * @return subList head
+     * @return 子链表反转后的头节点
      */
-    static ListNode<Integer> solution2(ListNode<Integer> head) {
-        if (head == null || head.getNext() == null) {
+    ListNode case1Solution2(ListNode head) {
+        if (head == null || head.next == null) {
             return head;
         }
-        ListNode<Integer> subHead = solution2(head.getNext());
-        head.getNext().setNext(head);
-        head.setNext(null);
+        ListNode subHead = case1Solution2(head.next);
+        head.next.next = head;
+        head.next = null;
         return subHead;
     }
 
-    public static class ListNode<T> {
+    /**
+     * 25. K个一组翻转链表：
+     * 给你链表的头节点head，每 k 个节点一组进行翻转，请你返回修改后的链表。
+     * k是一个正整数，它的值小于或等于链表的长度。如果节点总数不是k的整数倍，那么请将最后剩余的节点保持原有顺序。
+     * <p>
+     * 解法一：链表分区为已翻转部分+待翻转部分+未翻转部分
+     */
+    ListNode case2Solution1(ListNode head, int k) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
 
-        private T val;
+        // pre是已翻转部分的最后一个节点
+        ListNode preEnd = dummy;
+        // end是待翻转部分的最后一个节点
+        ListNode end = dummy;
 
-        private ListNode<T> next;
-
-        public ListNode(T val) {
-            this.val = val;
-        }
-
-        public ListNode<T> getNext() {
-            return next;
-        }
-
-        public void setNext(ListNode<T> next) {
-            this.next = next;
-        }
-
-        public static <T> String print(ListNode<T> head) {
-            StringJoiner joiner = new StringJoiner(", ");
-            while (head != null) {
-                joiner.add(head.val == null ? null : head.val.toString());
-                head = head.next;
+        while (end.next != null) {
+            for (int i = 0; i < k && end != null; i++) {
+                end = end.next;
             }
-            return joiner.toString();
+            if (end == null) {
+                break;
+            }
+            // start是待翻转部分首节点
+            ListNode start = preEnd.next;
+            // next是未翻转部分首节点
+            ListNode next = end.next;
+            end.next = null;
+            // reverse
+            preEnd.next = case1Solution1(start);
+            // 此时start是原待翻转部分的尾节点
+            start.next = next;
+            preEnd = start;
+            end = start;
         }
+        return dummy.next;
     }
+
 }
