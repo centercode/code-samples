@@ -31,4 +31,21 @@ public class ReverseListTest {
         head.next.next.next.next = new ListNode(5);
         Assert.assertEquals("[3,2,1,4,5]", reverseList.case2Solution1(head, 3).toString());
     }
+
+    @Test
+    public void case3Solution1() {
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+        Assert.assertEquals("[1,4,3,2,5]", reverseList.case3Solution1(head, 2, 4).toString());
+
+        head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+        Assert.assertEquals("[5,4,3,2,1]", reverseList.case3Solution1(head, 1, 5).toString());
+    }
 }

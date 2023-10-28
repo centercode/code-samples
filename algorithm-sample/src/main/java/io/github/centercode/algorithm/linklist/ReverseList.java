@@ -74,4 +74,29 @@ public class ReverseList {
         return dummy.next;
     }
 
+    /**
+     * 92. 反转链表 II：
+     * 给你单链表的头指针head和两个整数left和right，其中left<=right 。
+     * 请你反转从位置left到位置right的链表节点，返回反转后的链表 。
+     * 解法一：头插法
+     */
+    public ListNode case3Solution1(ListNode head, int left, int right) {
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode pre = dummy;
+        // 让pre.next指向left节点
+        for (int i = 0; i < left - 1; i++) {
+            pre = pre.next;
+        }
+        // curr初始化指向left节点
+        ListNode curr = pre.next;
+        for (int i = 0; i < right - left; i++) {
+            ListNode next = curr.next;
+            curr.next = next.next;
+            next.next = pre.next;
+            pre.next = next;
+        }
+        return dummy.next;
+    }
+
 }
