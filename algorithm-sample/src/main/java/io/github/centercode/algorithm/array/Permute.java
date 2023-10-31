@@ -1,6 +1,7 @@
 package io.github.centercode.algorithm.array;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -63,6 +64,48 @@ public class Permute {
             Collections.swap(permutation, j, i);
             case2Backtrack(res, permutation, i + 1);
             Collections.swap(permutation, j, i);
+        }
+    }
+
+    /**
+     * 60. 排列序列：
+     * 给出集合 [1,2,3,...,n]，其所有元素共有 n! 种排列。
+     * 给定 n 和 k，返回第 k 个排列。
+     */
+    public String case3Solution1(int n, int k) {
+        int[] factorial = new int[n + 1];
+        factorial[0] = 1;
+        // 计算阶乘数组
+        for (int i = 1; i <= n; i++) {
+            factorial[i] = factorial[i - 1] * i;
+        }
+        boolean[] used = new boolean[n + 1];
+        Arrays.fill(used, false);
+        StringBuilder path = new StringBuilder();
+        case3Dfs(n, k, used, factorial, n - 1, path);
+        return path.toString();
+    }
+
+    /**
+     * @param remains 剩余未固定位数
+     */
+    private void case3Dfs(int n, int k, boolean[] used, int[] factorial, int remains, StringBuilder path) {
+        if (remains < 0) {
+            return;
+        }
+        int cnt = factorial[remains];
+        for (int i = 1; i <= n; i++) {
+            if (used[i]) {
+                continue;
+            }
+            if (k > cnt) {
+                k -= cnt;
+                continue;
+            }
+            path.append(i);
+            used[i] = true;
+            case3Dfs(n, k, used, factorial, remains - 1, path);
+            return;
         }
     }
 
