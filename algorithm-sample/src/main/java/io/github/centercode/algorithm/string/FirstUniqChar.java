@@ -1,4 +1,4 @@
-package io.github.centercode.algorithm.hash;
+package io.github.centercode.algorithm.string;
 
 import java.util.HashMap;
 import java.util.Map;

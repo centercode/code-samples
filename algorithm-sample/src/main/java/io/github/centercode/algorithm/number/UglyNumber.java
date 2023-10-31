@@ -1,4 +1,4 @@
-package io.github.centercode.algorithm.dp;
+package io.github.centercode.algorithm.number;
 
 /**
  * 剑指 Offer 49. 丑数

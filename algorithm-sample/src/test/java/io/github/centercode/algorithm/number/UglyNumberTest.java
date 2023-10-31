@@ -1,9 +1,7 @@
-package io.github.centercode.algorithm.dp;
+package io.github.centercode.algorithm.number;
 
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class UglyNumberTest {
     UglyNumber uglyNumber = new UglyNumber();

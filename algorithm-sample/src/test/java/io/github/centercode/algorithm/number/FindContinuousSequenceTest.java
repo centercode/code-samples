@@ -1,6 +1,5 @@
 package io.github.centercode.algorithm.number;
 
-import io.github.centercode.algorithm.dp.FindContinuousSequence;
 import org.junit.Assert;
 import org.junit.Test;
 

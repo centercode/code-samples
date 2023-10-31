@@ -1,4 +1,4 @@
-package io.github.centercode.algorithm.dp;
+package io.github.centercode.algorithm.number;
 
 public class Fibonacci {
 
