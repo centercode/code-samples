@@ -23,6 +23,7 @@
         <module>jackson-sample</module>
         <module>jdbc-sample</module>
         <module>jdk-sample</module>
+        <module>jooq-sample</module>
         <module>junit4-sample</module>
         <module>junit5-sample</module>
         <module>junit-vintage-sample</module>
