@@ -29,6 +29,7 @@
         <module>junit-vintage-sample</module>
         <module>lunar-sample</module>
         <module>powermock-sample</module>
+        <module>roaring-bitmap-sample</module>
     </modules>
 
 </project>
