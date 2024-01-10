@@ -30,6 +30,7 @@
         <module>lunar-sample</module>
         <module>powermock-sample</module>
         <module>roaring-bitmap-sample</module>
+        <module>hutool-sample</module>
     </modules>
 
 </project>
