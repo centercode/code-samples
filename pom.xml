@@ -29,6 +29,7 @@
         <module>spark-sample</module>
         <module>windows-sample</module>
         <module>zookeeper-sample</module>
+        <module>starrocks-sample</module>
     </modules>
     <dependencyManagement>
         <dependencies>
