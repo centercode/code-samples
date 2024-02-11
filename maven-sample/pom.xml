@@ -13,6 +13,7 @@
     <artifactId>maven-sample</artifactId>
 
     <modules>
+        <module>maven-plugin-sample</module>
         <module>maven-repository-sample</module>
         <module>maven-takari-sample</module>
     </modules>
