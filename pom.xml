@@ -30,6 +30,7 @@
         <module>windows-sample</module>
         <module>zookeeper-sample</module>
         <module>starrocks-sample</module>
+        <module>doris-sample</module>
     </modules>
     <dependencyManagement>
         <dependencies>
