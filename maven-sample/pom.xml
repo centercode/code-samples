@@ -15,6 +15,7 @@
     <modules>
         <module>maven-archetype-script-sample</module>
         <module>maven-plugin-sample</module>
+        <module>maven-multimodule-sample</module>
         <module>maven-repository-sample</module>
         <module>maven-takari-sample</module>
     </modules>
