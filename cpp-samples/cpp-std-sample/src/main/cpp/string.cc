@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <sstream>
+#include <cassert>
 
 using std::boolalpha;
 using std::cout;
