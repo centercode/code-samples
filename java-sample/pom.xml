@@ -31,6 +31,7 @@
         <module>powermock-sample</module>
         <module>roaring-bitmap-sample</module>
         <module>hutool-sample</module>
+        <module>lombok-sample</module>
     </modules>
 
 </project>
