@@ -30,12 +30,32 @@ public class JDBCSample {
         sample.executeQuery(sql);
     }
 
+    /**
+     * 执行包含单个查询语句的SQL
+     */
     public void executeQuery(String sql) throws SQLException {
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
             try (Statement stmt = connection.createStatement()) {
                 try (ResultSet rs = stmt.executeQuery(sql)) {
                     consume(rs);
                 }
+            }
+        }
+        System.out.println("Execute query finished.");
+    }
+
+    /**
+     * 执行可能包含多个查询语句的SQL
+     */
+    public void executeQueries(String sql) throws SQLException {
+        try (Connection connection = DriverManager.getConnection(url, user, password)) {
+            try (Statement stmt = connection.createStatement()) {
+                stmt.execute(sql);
+                do {
+                    try (ResultSet rs = stmt.getResultSet()) {
+                        consume(rs);
+                    }
+                } while (stmt.getMoreResults());
             }
         }
         System.out.println("Execute query finished.");
