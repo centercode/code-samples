@@ -6,7 +6,7 @@ package io.github.centercode.starrocks.udf;
 public class ToUpperCaseUDF {
 
     /**
-     * evaluate 方法为 UDF 调用入口，必须是 public 成员方法。
+     * evaluate 方法为 UDF 调用入口，必须是 public 成员方法。参数类型必须为包装类型。
      * @return 返回类型必须为包装类型
      */
     public String evaluate(String s) {
