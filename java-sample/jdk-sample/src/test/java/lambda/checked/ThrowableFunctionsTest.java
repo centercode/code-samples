@@ -1,4 +1,4 @@
-package lambda;
+package lambda.checked;
 
 import org.junit.Test;
 
@@ -22,12 +22,5 @@ public class ThrowableFunctionsTest {
             throw new IOException();
         });
         assertFalse(foo.isPresent());
-    }
-
-    @Test(expected = IOException.class)
-    public void testSneakyThrowSupplier() {
-        ThrowableFunctions.sneakyThrowSupplier(() -> {
-            throw new IOException();
-        });
     }
 }

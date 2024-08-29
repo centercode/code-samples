@@ -1,4 +1,4 @@
-package lambda;
+package lambda.checked;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,30 +35,4 @@ public class ThrowableFunctions {
         }
     }
 
-    /**
-     * call ThrowableSupplier with sneaky throwing.
-     */
-    public static <R, E extends Exception> R sneakyThrowSupplier(ThrowableSupplier<R, E> supplier) {
-        try {
-            return supplier.get();
-        } catch (Throwable e) {
-            sneakyThrow(e);
-            // will not go here
-            return null;
-        }
-    }
-
-    private static <T extends Throwable> void sneakyThrow(Throwable t) throws T {
-        throw (T) t;
-    }
-
-    @FunctionalInterface
-    public interface ThrowableConsumer<T, E extends Exception> {
-        void accept(T t) throws E;
-    }
-
-    @FunctionalInterface
-    public interface ThrowableSupplier<R, E extends Exception> {
-        R get() throws E;
-    }
 }
