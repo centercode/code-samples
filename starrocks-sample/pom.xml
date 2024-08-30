@@ -12,6 +12,14 @@
 
     <artifactId>starrocks-sample</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
