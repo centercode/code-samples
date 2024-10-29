@@ -13,6 +13,7 @@
 
     <properties>
         <jooq.version>3.12.3</jooq.version>
+        <junit.version>5.9.0</junit.version>
     </properties>
 
     <dependencies>
@@ -22,8 +23,16 @@
             <version>${jooq.version}</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
