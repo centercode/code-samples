@@ -10,6 +10,45 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>maven-plugin-sample</artifactId>
+    <packaging>pom</packaging>
+
+    <profiles>
+        <profile>
+            <id>maven-dependency-plugin-unpack-sample</id>
+            <build>
+                <plugins>
+                    <!-- 将calcite-core包里的Parser.jj文件解压到当前目录 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <version>3.7.1</version>
+                        <executions>
+                            <execution>
+                                <id>unpack-parser-file</id>
+                                <phase>initialize</phase>
+                                <goals>
+                                    <goal>unpack</goal>
+                                </goals>
+                                <configuration>
+                                    <artifactItems>
+                                        <artifactItem>
+                                            <groupId>org.apache.calcite</groupId>
+                                            <artifactId>calcite-core</artifactId>
+                                            <version>1.31.0</version>
+                                            <type>jar</type>
+                                            <overWrite>true</overWrite>
+                                            <includes>**/Parser.jj</includes>
+                                            <outputDirectory>${project.build.directory}/</outputDirectory>
+                                        </artifactItem>
+                                    </artifactItems>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <build>
         <pluginManagement>
