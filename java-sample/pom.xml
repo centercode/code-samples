@@ -20,6 +20,7 @@
         <module>guava-sample</module>
         <module>hikaricp-sample</module>
         <module>httpclient-sample</module>
+        <module>hutool-sample</module>
         <module>ical4j-sample</module>
         <module>jackson-sample</module>
         <module>jdbc-sample</module>
