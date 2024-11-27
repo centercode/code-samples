@@ -15,6 +15,7 @@
 
     <modules>
         <module>alibaba-druid-sample</module>
+        <module>antlr4-sample</module>
         <module>cup-sample</module>
         <module>gson-sample</module>
         <module>guava-sample</module>
