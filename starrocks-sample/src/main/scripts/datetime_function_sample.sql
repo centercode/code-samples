@@ -141,14 +141,26 @@ select '2024-01-30' as dt, date_format('2024-01-30', '%D, %d, %e') as '%D, %d, %
 union all
 select '2024-01-31' as dt, date_format('2024-01-31', '%D, %d, %e') as '%D, %d, %e'
 order by 1;
--- 小时：%H, %h|%I, %p
-select '2024-01-01 00:00:00' as dt, date_format('2024-01-01 00:00:00', '%H, %h %p, %I %p') as '%H, %h %p, %I %p'
+-- 小时：%H, %k, %h|%I, %l, %p
+select '2024-01-01 00:00:00' as dt, date_format('2024-01-01 00:00:00', '%H, %k, %h|%I, %l, %p') as '%H, %k, %h|%I, %l, %p'
 union all
-select '2024-01-01 11:59:59' as dt, date_format('2024-01-01 11:59:59', '%H, %h %p, %I %p') as '%H, %h %p, %I %p'
+select '2024-01-01 00:00:01' as dt, date_format('2024-01-01 00:00:01', '%H, %k, %h|%I, %l, %p') as '%H, %k, %h|%I, %l, %p'
 union all
-select '2024-01-01 12:00:00' as dt, date_format('2024-01-01 12:00:00', '%H, %h %p, %I %p') as '%H, %h %p, %I %p'
+select '2024-01-01 00:01:00' as dt, date_format('2024-01-01 00:01:00', '%H, %k, %h|%I, %l, %p') as '%H, %k, %h|%I, %l, %p'
 union all
-select '2024-01-01 23:59:59' as dt, date_format('2024-01-01 23:59:59', '%H, %h %p, %I %p') as '%H, %h %p, %I %p'
+select '2024-01-01 01:00:00' as dt, date_format('2024-01-01 01:00:00', '%H, %k, %h|%I, %l, %p') as '%H, %k, %h|%I, %l, %p'
+union all
+select '2024-01-01 11:59:59' as dt, date_format('2024-01-01 11:59:59', '%H, %k, %h|%I, %l, %p') as '%H, %k, %h|%I, %l, %p'
+union all
+select '2024-01-01 12:00:00' as dt, date_format('2024-01-01 12:00:00', '%H, %k, %h|%I, %l, %p') as '%H, %k, %h|%I, %l, %p'
+union all
+select '2024-01-01 12:00:01' as dt, date_format('2024-01-01 12:00:01', '%H, %k, %h|%I, %l, %p') as '%H, %k, %h|%I, %l, %p'
+union all
+select '2024-01-01 12:01:00' as dt, date_format('2024-01-01 12:01:00', '%H, %k, %h|%I, %l, %p') as '%H, %k, %h|%I, %l, %p'
+union all
+select '2024-01-01 13:00:00' as dt, date_format('2024-01-01 13:00:00', '%H, %k, %h|%I, %l, %p') as '%H, %k, %h|%I, %l, %p'
+union all
+select '2024-01-01 23:59:59' as dt, date_format('2024-01-01 23:59:59', '%H, %k, %h|%I, %l, %p') as '%H, %k, %h|%I, %l, %p'
 order by 1;
 --分秒：%T, %r, %S|%s, %f
 select '2024-01-01 00:00:00' as dt, date_format('2024-01-01 00:00:00', '%T, %H:%i:%s, %H:%i:%S.%f, %r') as '%T, %H:%i:%s, %H:%i:%S.%f, %r'
@@ -160,51 +172,103 @@ union all
 select '2024-01-01 23:59:59' as dt, date_format('2024-01-01 23:59:59', '%T, %H:%i:%s, %H:%i:%S.%f, %r') as '%T, %H:%i:%s, %H:%i:%S.%f, %r'
 order by 1;
 --基于年份的周：%x, %v, %X, %V
--- 周一为周起始, 第一周至少4天，跨年
-select '2009-01-01' as dt, date_format('2009-01-01', '%x-W%v')
+-- 周一为周起始, 周1至少4天，跨年
+select '2008-12-31' as dt, date_format('2008-12-31', '%x-W%v,%a')
 union all
-select '2009-01-04' as dt, date_format('2009-01-04', '%x-W%v')
+select '2009-01-01' as dt, date_format('2009-01-01', '%x-W%v,%a')
 union all
-select '2009-01-05' as dt, date_format('2009-01-05', '%x-W%v')
+select '2009-01-02' as dt, date_format('2009-01-02', '%x-W%v,%a')
 union all
-select '2010-01-01' as dt, date_format('2010-01-01', '%x-W%v')
+select '2009-01-03' as dt, date_format('2009-01-03', '%x-W%v,%a')
+union all
+select '2009-01-04' as dt, date_format('2009-01-04', '%x-W%v,%a')
+union all
+select '2009-01-05' as dt, date_format('2009-01-05', '%x-W%v,%a')
+union all
+select '2009-12-31' as dt, date_format('2009-12-31', '%x-W%v,%a')
+union all
+select '2010-01-01' as dt, date_format('2010-01-01', '%x-W%v,%a')
+union all
+select '2010-01-02' as dt, date_format('2010-01-02', '%x-W%v,%a')
+union all
+select '2010-01-03' as dt, date_format('2010-01-03', '%x-W%v,%a')
+union all
+select '2010-01-04' as dt, date_format('2010-01-04', '%x-W%v,%a')
 order by 1;
--- 周日为周起始，第一周至少7天，跨年
-select '2005-01-01' as dt, date_format('2005-01-01', '%X-W%V')
+-- 周日为周起始，周1至少7天，跨年
+select '2005-12-31' as dt, date_format('2005-12-31', '%X-W%V, %a')
 union all
-select '2006-01-01' as dt, date_format('2006-01-01', '%X-W%V')
+select '2006-01-01' as dt, date_format('2006-01-01', '%X-W%V, %a')
 union all
-select '2006-01-07' as dt, date_format('2006-01-07', '%X-W%V')
+select '2006-01-07' as dt, date_format('2006-01-07', '%X-W%V, %a')
 union all
-select '2006-01-08' as dt, date_format('2006-01-08', '%X-W%V')
+select '2006-01-08' as dt, date_format('2006-01-08', '%X-W%V, %a')
+union all
+select '2007-01-01' as dt, date_format('2007-01-01', '%X-W%V, %a')
+union all
+select '2007-01-06' as dt, date_format('2007-01-06', '%X-W%V, %a')
+union all
+select '2007-01-07' as dt, date_format('2007-01-07', '%X-W%V, %a')
+order by 1;
+-- 周日为周起始，周1至少7天，不跨年
+select '2005-12-31' as dt, date_format('2005-12-31', '%Y-W%U, %a') as '%Y-W%U, %a'
+union all
+select '2006-01-01' as dt, date_format('2006-01-01', '%Y-W%U, %a') as '%Y-W%U, %a'
+union all
+select '2006-01-07' as dt, date_format('2006-01-07', '%Y-W%U, %a') as '%Y-W%U, %a'
+union all
+select '2006-01-08' as dt, date_format('2006-01-08', '%Y-W%U, %a') as '%Y-W%U, %a'
+union all
+select '2007-01-01' as dt, date_format('2007-01-01', '%Y-W%U, %a') as '%Y-W%U, %a'
+union all
+select '2007-01-06' as dt, date_format('2007-01-06', '%Y-W%U, %a') as '%Y-W%U, %a'
+union all
+select '2007-01-07' as dt, date_format('2007-01-07', '%Y-W%U, %a') as '%Y-W%U, %a'
+order by 1;
+-- 周一为周起始，周1至少4天，不跨年
+select '2008-12-31' as dt, date_format('2008-12-31', '%Y-W%u, %a') as '%Y-W%u, %a'
+union all
+select '2009-01-01' as dt, date_format('2009-01-01', '%Y-W%u, %a') as '%Y-W%u, %a'
+union all
+select '2009-01-04' as dt, date_format('2009-01-04', '%Y-W%u, %a') as '%Y-W%u, %a'
+union all
+select '2009-01-05' as dt, date_format('2009-01-05', '%Y-W%u, %a') as '%Y-W%u, %a'
+union all
+select '2009-12-31' as dt, date_format('2009-12-31', '%Y-W%u, %a') as '%Y-W%u, %a'
+union all
+select '2010-01-01' as dt, date_format('2010-01-01', '%Y-W%u, %a') as '%Y-W%u, %a'
+union all
+select '2010-01-03' as dt, date_format('2010-01-03', '%Y-W%u, %a') as '%Y-W%u, %a'
+union all
+select '2010-01-04' as dt, date_format('2010-01-04', '%Y-W%u, %a') as '%Y-W%u, %a'
 order by 1;
 --平年最大周数
-select '2001-12-30' as dt, date_format('2001-12-30', '%x-W%v')
+select '2001-12-30' as dt, date_format('2001-12-30', '%x-W%v') as '%x-W%v', date_format('2001-01-01', '%a') as '当年首日星期数'
 union all
-select '2002-12-29' as dt, date_format('2002-12-29', '%x-W%v')
+select '2002-12-29' as dt, date_format('2002-12-29', '%x-W%v') as '%x-W%v', date_format('2002-01-01', '%a') as '当年首日星期数'
 union all
-select '2003-12-28' as dt, date_format('2003-12-28', '%x-W%v')
+select '2003-12-28' as dt, date_format('2003-12-28', '%x-W%v') as '%x-W%v', date_format('2003-01-01', '%a') as '当年首日星期数'
 union all
-select '2009-12-31' as dt, date_format('2009-12-31', '%x-W%v')
+select '2009-12-31' as dt, date_format('2009-12-31', '%x-W%v') as '%x-W%v', date_format('2009-01-01', '%a') as '当年首日星期数'
 union all
-select '2010-12-31' as dt, date_format('2010-12-31', '%x-W%v')
+select '2010-12-31' as dt, date_format('2010-12-31', '%x-W%v') as '%x-W%v', date_format('2010-01-01', '%a') as '当年首日星期数'
 union all
-select '2011-12-31' as dt, date_format('2011-12-31', '%x-W%v')
+select '2011-12-31' as dt, date_format('2011-12-31', '%x-W%v') as '%x-W%v', date_format('2011-01-01', '%a') as '当年首日星期数'
 union all
-select '2017-12-31' as dt, date_format('2017-12-31', '%x-W%v')
+select '2017-12-31' as dt, date_format('2017-12-31', '%x-W%v') as '%x-W%v', date_format('2017-01-01', '%a') as '当年首日星期数'
 order by 1;
 -- 闰年最大周数
-select '1940-12-29' as dt, date_format('1940-12-29', '%x-W%v')
+select '1940-12-29' as dt, date_format('1940-12-29', '%x-W%v') as '%x-W%v', date_format('1940-01-01', '%a') as '当年首日星期数'
 union all
-select '1952-12-31' as dt, date_format('1952-12-28', '%x-W%v')
+select '1952-12-31' as dt, date_format('1952-12-28', '%x-W%v') as '%x-W%v', date_format('1952-01-01', '%a') as '当年首日星期数'
 union all
-select '1964-12-31' as dt, date_format('1964-12-31', '%x-W%v')
+select '1964-12-31' as dt, date_format('1964-12-31', '%x-W%v') as '%x-W%v', date_format('1964-01-01', '%a') as '当年首日星期数'
 union all
-select '1976-12-31' as dt, date_format('1976-12-31', '%x-W%v')
+select '1976-12-31' as dt, date_format('1976-12-31', '%x-W%v') as '%x-W%v', date_format('1976-01-01', '%a') as '当年首日星期数'
 union all
-select '1988-12-31' as dt, date_format('1988-12-31', '%x-W%v')
+select '1988-12-31' as dt, date_format('1988-12-31', '%x-W%v') as '%x-W%v', date_format('1988-01-01', '%a') as '当年首日星期数'
 union all
-select '2000-12-31' as dt, date_format('2000-12-31', '%x-W%v')
+select '2000-12-31' as dt, date_format('2000-12-31', '%x-W%v') as '%x-W%v', date_format('2000-01-01', '%a') as '当年首日星期数'
 union all
-select '2012-12-31' as dt, date_format('2012-12-30', '%x-W%v')
+select '2012-12-31' as dt, date_format('2012-12-30', '%x-W%v') as '%x-W%v', date_format('2012-01-01', '%a') as '当年首日星期数'
 order by 1;
