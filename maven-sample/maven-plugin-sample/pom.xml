@@ -12,6 +12,10 @@
     <artifactId>maven-plugin-sample</artifactId>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>maven-jar-plugin-sample</module>
+    </modules>
+
     <profiles>
         <profile>
             <id>maven-dependency-plugin-unpack-sample</id>
