@@ -1,7 +1,6 @@
 package io.github.centercode;
 
 import lombok.val;
-import lombok.var;
 import org.junit.jupiter.api.Test;
 
 import java.nio.charset.StandardCharsets;

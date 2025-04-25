@@ -12,7 +12,7 @@
     <artifactId>hadoop-sample</artifactId>
 
     <properties>
-        <hadoop.version>2.6.0</hadoop.version>
+        <hadoop.version>3.3.0</hadoop.version>
     </properties>
 
     <dependencies>
