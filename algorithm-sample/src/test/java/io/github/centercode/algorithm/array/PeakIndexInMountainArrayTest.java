@@ -1,7 +1,5 @@
 package io.github.centercode.algorithm.array;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Test;
 

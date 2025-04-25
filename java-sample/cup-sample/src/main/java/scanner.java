@@ -1,4 +1,6 @@
-import java_cup.runtime.*;
+import java_cup.runtime.DefaultSymbolFactory;
+import java_cup.runtime.Symbol;
+import java_cup.runtime.SymbolFactory;
 
 /**
  * Copied from : http://www2.cs.tum.edu/projects/cup/examples.php

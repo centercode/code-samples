@@ -3,8 +3,6 @@ package io.github.centercode.algorithm.tree;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class MaxDepthTest {
 
     @Test
